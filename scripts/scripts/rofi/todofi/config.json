@@ -1,0 +1,18 @@
+{
+    "priorities": [
+        "1 - Now",
+        "2 - Next",
+        "3 - Soon",
+        "4 - Later",
+        "5 - Someday",
+        "6 - Waiting"
+    ],
+    "theme" : "todofi.rasi",
+    "accent" : "#86CB92",
+    "taskfileslocation": "/home/saddaf/scripts/rofi/todofi/",
+    "taskfiles": [
+        "todofi.json",
+        "household.json",
+        "hobby.json"
+    ]
+}

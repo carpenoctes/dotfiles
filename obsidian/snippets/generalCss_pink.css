@@ -1,0 +1,367 @@
+:root{
+}
+body{
+    --font-text-override:   Cairo;
+    --font-monospace-override: "agave nerd font", monospace;
+    --font-text-size:       18px !important;
+}
+.theme-dark{
+    --system-color_primary:        hsl(10, 87%, 76%);
+    --system-color_primary_light:  hsl(10, 87%, 86%);
+    --system-color_primary_dark:   hsl(10, 87%, 66%);
+    --system-color_secondary:      hsl(170, 87%, 76%);
+    --system-color_secondary_light:hsl(170, 87%, 86%);
+    --system-color_secondary_dark: hsl(170, 87%, 66%);
+    --system-color_tertiary:       hsl(210, 87%, 76%);
+    --system-color_tertiary_light: hsl(210, 87%, 86%);
+    --system-color_light1:         #FDEBE7;
+    --system-color_light2:         #e5e5e5;
+    --system-color_gray:           #5E6473;
+    --system-color_gray_light:     #737A8C;
+    --system-color_accent:         #FFD972;
+    --system-color_text:           #faf4f0;
+
+    /*--background-primary:         #242424;
+    --background-primary-alt:     #191919;
+    --background-secondary:       #191919;
+    --background-secondary-alt:   #3D3D3D;*/
+    --background-primary:         #292C33;
+    --background-primary-alt:     #181A1F;
+    --background-secondary:       #181A1F;
+    --background-secondary-alt:   #292C33;
+    --text-normal:                var(--system-color_text);
+    --text-faint:                 var(--system-color_light1);
+    --text-title-h1:              var(--system-color_primary);
+    --text-title-h2:              var(--system-color_secondary);
+    --text-title-h3:              var(--system-color_tertiary);
+    --text-title-h4:              #EEEEEE;
+    --text-title-h5:              #E0E0E0;
+    --text-title-h6:              #E0E0E0;
+    --text-highlight:             inherit;
+    --text-highlight-bg:          inherit;
+    --text-link:                  var(--system-color_secondary);
+    --text-a-hover:               var(--system-color_secondary);
+    --text-accent-hover:          var(--system-color_accent);
+    /* ^^^ added for hover over bracket internal links */
+    --inline-code:                var(--system-color_secondary);
+    --code-block:                 var(--system-color_secondary);
+    --code-size:                  1em;
+    --text-a:                     var(--system-color_secondary);
+    --interactive-accent:         var(--system-color_primary);
+    --text-accent:                var(--system-color_primary);
+    --text-on-accent:             #FFF;
+    --interactive-accent-rgb:     var(--system-color_primary);
+    --vim-cursor:                 var(--system-color_primary);
+    /*  --text-mark:                  add text-mark if needed, this should work together with 'mark' */
+    --pre-code:                   var(--system-color_text);
+    --interactive-before:         #7c6f64;
+    --background-modifier-border: var(--system-color_primary);
+    --text-selection:             var(--background-primary-alt);
+
+
+    --bold-color: var(--system-color_secondary);
+    --italic-color: var(--system-color_tertiary);
+
+    /* Bold and Italic */
+    --bold-italic-color: var(--system-color_secondary_light);
+
+    --list-indent: 1.5em;
+    --list-spacing: 0.2em;
+
+    --color-highlight-text:     var(--system-color_tertiary_light);
+    --color-highlight-bg:       var(--background-primary-alt);
+    --color-highlight-border:   rgba(135, 212, 196,20%);
+
+    /* Tables */
+    --table-background: transparent;
+    --table-border-width: 1px;
+    --table-border-color: var(--system-color_gray);
+
+    --table-white-space: normal;
+
+    --table-header-background: var(--background-secondary); /*doesn't work*/
+    --table-header-background-hover: var(--background-secondary-alt);
+    --table-header-border-width: var(--table-border-width);
+    --table-header-border-color: var(--table-border-color);
+    --table-header-font: inherit;
+    --table-header-size: inherit;
+    --table-header-weight: var(--font-semibold);
+    --table-header-color: var(--system-color_primary);
+    --table-header-color: #FFF;
+
+    --table-text-size: inherit;
+    --table-text-color: inherit;
+
+    --table-column-max-width: none;
+    --table-column-alt-background: var(--table-background);
+    --table-column-first-border-width: var(--table-border-width);
+    --table-column-last-border-width: var(--table-border-width);
+
+    --table-row-background-hover: rgba(0, 0, 0, 0.3);
+    --table-row-alt-background: rgba(255, 255, 255, 0.03);
+    --table-row-last-border-width: var(--table-border-width);
+    --link-decoration: underline;
+
+
+}
+
+/* Highlight */
+.theme-dark .cm-s-obsidian span.cm-highlight.cm-highlight,
+.theme-dark .cm-s-obsidian span.cm-highlight.cm-highlight.cm-em,
+.theme-dark .cm-s-obsidian span.cm-highlight.cm-highlight.cm-strong,
+.theme-dark .cm-s-obsidian span.cm-highlight.cm-highlight.cm-strong.cm-em,
+.theme-dark .markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight,
+.theme-dark .markdown-preview-view mark em,
+.theme-dark .markdown-preview-view mark strong,
+.theme-dark .markdown-preview-view mark em strong,
+.theme-dark .markdown-preview-view mark strong em,
+.theme-dark .markdown-preview-view mark,
+.theme-dark .callout mark {
+    color: var(--color-highlight-text);
+    background: var(--color-highlight-bg);
+    border-bottom: 1px solid var(--color-highlight-border);
+}
+
+  .cm-header-1 {
+  font-size: 32px;
+  line-height: 200%;
+  }
+
+  .cm-header-2 {
+  font-size: 28px;
+  line-height: 200%;
+  }
+
+  .cm-header-3 {
+  font-size: 28px;
+  line-height: 200%;
+  }
+
+  .HyperMD-header .cm-header-4 {
+  font-size: 20px;
+  line-height: 200%;
+  }
+
+  .cm-header-5 {
+  font-size: 16px;
+  line-height: 200%;
+  }
+
+  .cm-header-6 {
+  font-size: 16px;
+  color: --text-normal;
+  }
+
+  .markdown-preview-view h1 {
+  font-size: 32px;
+  line-height: 125%;
+  margin: 10px 0;
+  }
+
+  .markdown-preview-view h2 {
+  font-size: 28px;
+  line-height: 125%;
+  margin: 10px 0;
+  }
+
+  .markdown-preview-view h3 {
+  font-size: 24px;
+  line-height: 125%;
+  margin: 10px 0;
+  }
+
+  .markdown-preview-view h4 {
+  font-size: 18px;
+  line-height: 125%;
+  }
+
+  .markdown-preview-view h5 {
+  font-size: 16px;
+  line-height: 125%;
+  }
+
+  .markdown-preview-view h6 {
+  font-size: 16px;
+  line-height: 125%;
+  }
+
+  /*-----------------------------------------*/
+  /* End of main theme, extra functionality can be added below */
+
+/*  .markdown-source-view { font-family: var(--font-monospace)
+  }
+
+ul,ol {
+padding-inline-start: 2em !important;
+}
+.HyperMD-list-line.HyperMD-list-line-1 {
+padding-left: 2em !important;
+}
+
+.HyperMD-list-line.HyperMD-list-line-2{
+padding-left: 4em !important;
+}
+
+.HyperMD-list-line.HyperMD-list-line-3{
+padding-left: 6em !important;
+}
+
+.HyperMD-list-line.HyperMD-list-line-4 {
+padding-left: 8em !important;
+}
+
+.HyperMD-list-line.HyperMD-list-line-5 {
+padding-left: 10em !important;
+}
+
+.HyperMD-list-line.HyperMD-list-line-6 {
+padding-left: 12em !important;
+}
+
+.HyperMD-list-line.HyperMD-list-line-7 {
+padding-left: 14em !important;
+}
+
+.HyperMD-list-line.HyperMD-list-line-8{
+padding-left: 16em !important;
+}*/
+
+/*────────────────────────────────────
+                Callouts
+────────────────────────────────────*/
+.callout {
+padding:0;
+border-left:5px solid rgb(var(--callout-color)) !important; 
+box-shadow: 2px 2px 4px rgba(255,255,255,0.1);
+}
+.callout-title{
+background-color: var(--callout-color);
+padding:var(--callout-padding);
+}
+.callout-content{
+background-color: var(--background-primary);
+padding:var(--callout-padding);
+}
+
+/* For reference, if want to change colors
+.callout[data-callout="info"], .callout[data-callout="todo"] {
+--callout-color: 0, 184, 212;
+}
+*/
+
+/*────────────────────────────────────
+                Dataview
+────────────────────────────────────*/
+/* Dataview Tables */
+/* Source View */
+.markdown-source-view.mod-cm6 .cm-embed-block {
+    padding: 0;
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table {
+    margin-bottom: 0;
+    border: 1px solid var(--system-color_gray);
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table > thead > tr > th {
+    font-size: var(--font-medium);
+    border-width: 0px;
+    border-bottom: 1px solid var(--system-color_gray);
+    border-right: 1px solid var(--system-color_gray);
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table thead,
+.markdown-source-view.mod-cm6
+.dataview.table-view-table tr,
+.markdown-source-view.mod-cm6
+.dataview.table-view-table td,
+.markdown-source-view.mod-cm6
+.dataview.table-view-table th {
+    padding: 4px 10px;
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table thead {
+    border: none;
+    margin: 0;
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table thead.table-view-thead tr th {
+    font-size: var(--font-medium);
+    background: var(--background-secondary);
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table .table-view-tbody tr {
+    border-bottom: 1px solid var(--system-color_gray);
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table .table-view-tbody td {
+    padding: 4px 10px;
+    border-right: 1px solid var(--system-color_gray);
+}
+
+.markdown-source-view.mod-cm6
+.dataview.table-view-table .table-view-tbody td:not(td:last-of-type) {
+    padding: 4px 10px;
+}
+
+/* Theme Mode Specific */
+.theme-dark .markdown-source-view.mod-cm6 
+dataview.table-view-table .table-view-tbody tr {
+    background: var(--color-blacker);
+}
+
+/* Preview View */
+.markdown-preview-view
+.dataview.table-view-table {
+    border: 1px solid var(--system-color_gray);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table > thead > tr > th {
+    font-size: var(--font-scale-1);
+    border-width: 0px;
+    border-bottom: 1px solid var(--system-color_gray);
+    border-right: 1px solid var(--system-color_gray);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table .table-view-tbody tr {
+    border-bottom: 1px solid var(--system-color_gray);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table .table-view-tbody td {
+    padding: 4px 10px;
+    border-right: 1px solid var(--system-color_gray);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table ul.dataview-ul {
+    list-style: none;
+}
+
+/* Dataview Task List */
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview h4 {
+    margin: 15px 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview h4:first-of-type {
+    margin-top: 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview .dataview.result-group input.task-list-item-checkbox {
+    margin-right: var(--size-2-3);
+}
+
+/* Dataview List */
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview ul.dataview.list-view-ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
