@@ -22,6 +22,8 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
 
@@ -31,3 +33,7 @@ alias ll='ls -la'
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"  #Saddaf: prevents annoying highlighting on NTFS folders
+export LOCALE_ARCHIVE=$(nix-build '<nixpkgs>' -A glibcLocales)/lib/locale/locale-archive
+
+# Autojump
+source /home/saddaf/dotfiles/autojump/autojump.zsh

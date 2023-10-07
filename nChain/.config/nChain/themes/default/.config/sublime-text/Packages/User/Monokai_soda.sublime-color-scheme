@@ -1,0 +1,132 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables":
+	{
+		"comments":	"#6F7487",			//bluish grey - comments
+		"keywords": "#35DBBA",			//teal - keywords and storage
+		"builtin": 	"#EB94B7",			//light pink - builtin functions
+		"functions":"#FF7b89",			//pink - user functions and calls to those
+		"arguments":"#7dbeff",			//clear blue - arguments & mysqli
+		"values":	"#D898D8",
+		"support":	"#81AEDB",			//dark saturated blue - support key words
+		"brackets":	"#B1C9E0",			//super light blue
+		"strings":	"#E3DAC1",			//light yellow - strings
+		"attr": 	"#D98DAB",			//medium pink - tag attribute, numbers, true/false, \n
+		"tags":		"#81AEDB",			//dark saturated blue - tags
+		"black3": 	"#292C33",
+		"black2": 	"#1e1f22",
+        "white3":   "#DBDEE1",
+		"blue": 	"var(support)",
+		"purple": 	"var(values)",		
+		"yellow": 	"var(strings)",
+		"yellow2": 	"var(arguments)",		//because the green is ugly
+		"orange": 	"var(arguments)",	
+		"yellow5": 	"var(comments)"
+	},
+	"globals":
+	{
+	},
+	"rules":
+	[
+		 {
+            "name": "Functions def",
+            "scope": "entity.name.function",
+            "font_style": "italic",
+            "foreground": "var(functions)"
+        },
+        {
+            "name": "User defined function call",
+            "scope": "variable.function.php, variable.annotation",
+            "foreground": "var(functions)"
+        },
+        {
+            "name": "Library constant",
+            "scope": "support.constant",
+            "foreground": "var(arguments)"
+        },
+        {
+            "name": "Library function",
+            "scope": "support.function, support.macro, variable.function",
+            "foreground": "var(builtin)"
+        },
+        {
+            "name": "MYSQLI",
+            "scope": "support.function.mysqli",
+            "foreground": "var(arguments)",
+        },
+        {
+            "name": "SQL",
+            "scope": "source.sql.embedded.php",
+            "foreground": "var(brackets)",
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "foreground": "var(support)",
+        },
+        {
+            "name": "Constants",
+            "scope": "support.constant",
+            "foreground": "var(strings)",
+        },
+        {
+            "name": "CSS tag selector",
+            "scope": "entity.other.attribute-name.id.css",
+            "foreground": "var(functions)",
+        },
+        {
+            "name": "CSS id selector",
+            "scope": "entity.name.tag.html.css",
+            "foreground": "var(keywords)",
+        },
+        {
+            "name": "CSS properties",
+            "scope": "support.type.property-name.css",
+            "foreground": "var(arguments)",
+        },
+        {
+            "name": "CSS variables",
+            "scope": "variable.other.custom-property.css",
+            "foreground": "var(red2)",
+        },
+        {
+            "name": "Brackets",
+            "scope": "meta.item-access, punctuation.section.brackets",
+            "foreground": "#B1C9E0",
+        },
+        {
+            "name": "JQuery",
+            "scope": "variable.other.dollar.only.js",
+            "foreground": "var(keywords)",
+        },
+        {
+            "name": "Keyword",
+            "scope": "keyword - (source.c keyword.operator | source.c++ keyword.operator | source.objc keyword.operator | source.objc++ keyword.operator), keyword.operator.word, source.ruby keyword.declaration",
+            "foreground": "var(keywords)",
+            //"font_style": "italic"
+        },
+  
+  
+        {
+            "name": "Start/End php",
+            "scope": "punctuation.section.embedded.begin.php, punctuation.section.embedded.end.php",
+            "foreground": "var(red2)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Tag attribute",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(attr)"
+        },
+        {
+            "name": "Tag name",
+            "scope": "entity.name.tag",
+            "foreground": "var(tags)"
+        },
+        {
+            "name": "Storage",
+            "scope": "storage",
+            "foreground": "var(keywords)"
+        },
+	]
+}

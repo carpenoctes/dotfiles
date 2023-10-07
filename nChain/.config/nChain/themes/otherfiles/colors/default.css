@@ -1,0 +1,20 @@
+general{
+	--primary: 				hsl(210, 56%, 68%); /*#81AEDB;*/
+	--primary_strong:		hsl(210, 100%,75%);
+	--primary_light:		hsl(210, 43%, 79%);
+	--primary_dark:			hsl(210, 38%, 58%);	
+	--secondary: 			hsl(300, 45%, 72%);	/*#D898D8;*/
+	--secondary_light:		hsl(336, 69%, 75%);	
+	--secondary_dark:		hsl(283, 23%, 50%);	/*#8d649d;*/
+	--tertiary:				hsl(130, 40%, 66%); /*#86CB92;*/	
+	--tertiary_light:		hsl(130, 30%, 76%);
+	--tertiary_dark:		hsl(130, 30%, 46%);
+}
+waybar{
+	ws-active: --secondary-dark;
+	ws-occupied: --secondary;
+	ws-hover: --tertiary;
+	ws-button: --primary_dark;
+	sys-icons: --primary_light;
+
+}

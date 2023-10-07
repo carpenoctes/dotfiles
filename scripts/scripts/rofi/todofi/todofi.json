@@ -55,6 +55,15 @@
             "tags": "#artikel"
         },
         {
+            "caption": "da",
+            "comment": "",
+            "created": "2023-10-07",
+            "group": "+H\u00e4lsofakta",
+            "priority": "3",
+            "status": "todo",
+            "tags": "#annonsering"
+        },
+        {
             "caption": "Dokumentation Bevakning",
             "comment": "",
             "created": "2023-06-26",

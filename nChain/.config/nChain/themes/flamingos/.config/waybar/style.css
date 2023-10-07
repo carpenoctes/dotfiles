@@ -13,8 +13,12 @@ window#waybar {
 window#waybar.hidden {
     opacity: 0.2;
 }
-.modules-left{margin-top: 3px}
-.modules-right{margin-bottom: 3px}
+.modules-left{margin-top: 3px;
+    background: rgba(63,74,90,0.6);}
+.modules-right{
+    margin-bottom: 3px;
+    background-color: rgba(63,74,90,0.8);
+}
 #window {
     margin-top: 6px;
     padding-left: 10px;
@@ -29,18 +33,18 @@ window#waybar.hidden {
 /*    margin-left: 12px;*/
 /*    margin-bottom: 0px;*/
     border-radius: 10px;
-    background: rgba(22, 19, 32,0.6);
+    
     transition: none;
     font-size: 48px;
 }
 
 #workspaces button {
     transition: none;
-    color: #6b94bd;
+    color: rgba(114, 186, 172, 0.8);
     background: transparent;
-    border-radius: 4px;
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
     padding:4px;
 }
 #workspaces button:first-child{
@@ -52,16 +56,16 @@ window#waybar.hidden {
 }
 #workspaces button.occupied {
     transition: none;
-    color: #D898D8;
+    color: #F79E8D;
     background: transparent;
     font-size: 4px;
 }
 #workspaces button.persistent {
-    color: rgba(51, 75, 99,0.8);
+    color: rgba(114, 186, 172, 0.8);
 }
 #workspaces button.active {
-    color: #8d649d;
-    border-color: #8d649d;
+    color: #F79E8D;
+    border-color: #F79E8D;
 }
 #workspaces button.urgent {
     color: #FF7B89;
@@ -72,18 +76,15 @@ window#waybar.hidden {
     transition: none;
     box-shadow: inherit;
     text-shadow: inherit;
-    border-color: #86CB92;
-    color: #86CB92;
+    border-color: #72baac;
+    color: #72baac;
 }
 
 #mode {
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;
 }
-.modules-right{
-    background-color: rgba(51, 75, 99,0.8);
 
-}
 #clock,
 #battery,
 #cpu,
@@ -102,7 +103,7 @@ window#waybar.hidden {
 #battery
 #mpd {
     padding: 6px 0px;
-    color: #B1C9E0;
+    color: #A5CAD2;
     font-size: 32px;
 }
 #clock{ font-size:32px; padding:0;color: #ffffff;}
@@ -130,7 +131,7 @@ window#waybar.hidden {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #6394C5;
+    background-color: #A5CAD2;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 1s;
@@ -144,7 +145,6 @@ label:focus {
 }
 
 #tray {
-/*    background-color: #2980b9;*/
     font-size: 32px;
 }
 

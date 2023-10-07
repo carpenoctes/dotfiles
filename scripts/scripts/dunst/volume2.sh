@@ -30,7 +30,8 @@ case $1 in
         send_notification
 	;;
     mute)
-        pactl set-sink-mute @DEFAULT_SINK@ toggle > /dev/null
+        #pactl set-sink-mute @DEFAULT_SINK@ toggle > /dev/null
+        amixer set Master toggle > /dev/null
         if is_mute ; then
             dunstify -a "Muter" -i audio-volume-muted -r 2593 -u normal "Volume muted!"
             else

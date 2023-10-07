@@ -160,9 +160,9 @@
             "critical": 15
         },
         "format": "{icon}",
-        "format-charging": "\udb84\udea6",
+        //"format-charging": "\udb84\udea6",
         // "format-plugged": "",
-        "format-alt": "{time} {capacity}%",
+        "format-alt": "{capacity}%",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["\udb80\udc8e", "\udb84\udea1", "\udb84\udea2", "\udb84\udea3", "\udb85\udfe2"]

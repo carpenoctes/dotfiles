@@ -1,0 +1,12 @@
+general{
+	--primary: 				hsl(10, 87%, 76%); /*#F79E8D*/
+	--primary_strong:		hsl(354,100%,74%); /*#FF7B89*/
+	--primary_light:		hsl(10, 77%, 80%); /#F3B2A5*/
+	--primary_dark:			hsl(5, 60%, 70%);	
+	--secondary: 			hsl(168, 34%, 59%);	/*#72baac;*/
+	--secondary_light:		hsl(191, 33%, 74%); /*#A5CAD2*/
+	--secondary_dark:		hsl(217, 31%, 59%);	/*#758EB7*/
+	--tertiary:				hsl(260, 21%, 47%); /*#705F93*/
+	--tertiary_light:		
+	--tertiary_dark:		
+}

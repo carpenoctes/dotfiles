@@ -3,8 +3,7 @@
 launcher="rofi -dmenu -p 'Select theme:'"
 
 folders_to_skip=(
-  # "folder_one"
-  # "folder_two"
+  "otherfiles"
   "*LEFT"
   "*ALT"
 )
@@ -19,6 +18,7 @@ post_commands=(
   "killall wbg"
   "waybar &"
   "wbg /home/saddaf/wallpapers/desktop.jpg &"
+  "nwg-look -a"
   # "$HOME/.config/nChain/scripts/notify-send.sh &"
   # "kitty @ all set-colors -a -c $HOME/.config/kitty/theme.conf"
   #~/Documents/miniprojects/nChain/nChain.sh
