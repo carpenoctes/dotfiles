@@ -1,0 +1,47 @@
+[volume]
+    appname = Volym
+    format = "<span font='Monospace 1'>%a %s %b</span>"
+    #highlight = "#D898D8"
+    #background = "#5E6473cc"
+    #foreground = "#737a8c"
+    #frame_color = "#D898D8cc"
+    icon_position = top
+    history_ignore = yes
+[volume_muted]
+    appname = Muter 
+    format = "%s"
+    icon_position = left
+    history_ignore = yes
+
+[discord]
+    desktop_entry = "discord"
+    format = "<span font='Noto Sans italic 8'>%a</span>\n<span font='Iosevka 16'>%s</span>\n%b"
+    timeout = 20
+[discord_ozz]
+    desktop_entry = "discord"
+    summary = Ozz*
+    format = "<span font='Noto Sans italic 8'>%a</span>\n<span font='Iosevka 16' foreground='#7dbeff'>%s</span>\n%b"
+    frame_color = "#7dbeffdd"
+[discord_utopia]
+    desktop_entry = "discord"
+    summary = utopiabot*
+    format = "<span font='Noto Sans italic 8'>%a</span>\n<span font='Iosevka 16' foreground='#ef4e7b'>%s</span>\n%b"
+    frame_color = "#ef4e7bdd"
+    timeout = 0
+
+[systemmsg]
+    appname = notify-sent
+[vectuzmail]
+    appname= Thunderbird
+    summary= saddaf@vectuz.se*
+    format = "<b><span font='Iosevka 16' foreground='#a166ab'>Vectuz E-post</span></b>\n%b"
+    #background= "#b3c7db"
+    #foreground="#385775"
+    #frame_color="#a166abcc"
+[prisfaktamail]
+    appname= Thunderbird
+    summary= saddaf@prisfakta.se*
+    format = "<b><span font='Iosevka 16' foreground='#FF9E0E'>Prisfakta E-post</span></b>\n%b"
+[Schemata]
+    appname= Schemata
+    format="<span font='Noto Sans italic 8' foreground='#6394C5'>%a</span>\n<span foreground='#FFFFFF' font='agave Nerd Font 16'>%s</span>\n<span foreground='#86CB92' font='Iosevka 16'>%b</span>"

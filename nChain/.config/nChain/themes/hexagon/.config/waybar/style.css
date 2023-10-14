@@ -1,0 +1,160 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: 'Agave Nerd Font Mono',Roboto;
+/*    font-size: 24px;*/
+    min-height: 10px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+.modules-left{margin-top: 3px;
+    background: rgba(23,42,58,0.5);}
+.modules-right{
+    margin-bottom: 3px;
+    background-color: rgba(23,42,58,0.5);
+}
+#window {
+    margin-top: 6px;
+    padding-left: 10px;
+    padding-right: 0px;
+    border-radius: 6px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+#workspaces {
+/*    margin-top: 6px;*/
+/*    margin-left: 12px;*/
+/*    margin-bottom: 0px;*/
+    border-radius: 6px;
+    transition: none;
+    font-size: 32px;
+}
+
+#workspaces button {
+    transition: none;
+    color: rgba(85,189,207,0.4);
+    background: transparent;
+    
+    padding:4px;
+    border-radius: 0;
+    border-left: 2px solid #f78da4;
+    border-right: 2px solid #f78da4;
+}
+#workspaces button:first-child{
+    border-radius: 6px 6px 0 0;
+}
+#workspaces button:last-child{
+    border-radius: 0 0 6px 6px;
+}
+#workspaces button.occupied {
+    transition: none;
+    color: #F79E8D;
+    background: transparent;
+    font-size: 4px;
+}
+#workspaces button.persistent {
+    /*color: rgba(114, 186, 172, 0.8);*/
+}
+#workspaces button.active {
+    color: #f78da4;
+}
+#workspaces button.urgent {
+    color: #FF7B89;
+    border-color: #FF7B89;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-color: #6db4c0;
+    color: #55bccf;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#battery,
+#custom-power,
+#mpd {
+    padding: 4px 0px;
+    color: #b1dfe7;
+    font-size: 32px;
+}
+#clock{ font-size:24px; padding:0;color: #ffffff;}
+#custom-line{
+    color:#f78da4;
+    font-size: 24px;
+}
+#custom-power{
+    color:#55bccf;
+}
+#network{font-size: 32px}
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: unset;
+        color: #FF7B89;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #F3A5B6;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+/*    animation-direction: alternate;*/
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#tray {
+    font-size: 24px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #FF7B89;
+}

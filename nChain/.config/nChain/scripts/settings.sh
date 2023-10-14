@@ -16,9 +16,13 @@ post_commands=(
   "bash nChain.sh -l default"
   "killall waybar"
   "killall wbg"
+  
   "waybar &"
   "wbg /home/saddaf/wallpapers/desktop.jpg &"
   "nwg-look -a"
+  "cd /home/saddaf/.config/dunst"
+  "sh dunstmerge top-right"
+  "kill $(pidof dunst)"
   # "$HOME/.config/nChain/scripts/notify-send.sh &"
   # "kitty @ all set-colors -a -c $HOME/.config/kitty/theme.conf"
   #~/Documents/miniprojects/nChain/nChain.sh

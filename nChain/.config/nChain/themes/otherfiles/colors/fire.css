@@ -1,0 +1,9 @@
+general{
+	--primary: 				hsl(23, 100%, 50%);	/*#FF6200*/
+	--primary_strong:		hsl(23, 100%, 50%); /*#FF6200*/
+	--primary_light:		hsl(23, 85%, 70%); /**/
+	--primary_dark:			hsl(23, 85%, 40%); /**/	
+	--secondary: 			hsl(206, 61%, 36%);/*#236192;*/
+	--secondary_light:		hsl(206, 76%, 80%); /*#A5D1F3*/
+	--secondary_dark:		hsl(207, 100%, 20%);/*#003865*/
+}

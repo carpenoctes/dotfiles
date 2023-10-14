@@ -2,35 +2,40 @@
     "layer": "top", // Waybar at top layer
     "position": "left", // Waybar position (top|bottom|left|right)
     //"height": 30, // Waybar height (to be removed for auto height)
-    "width": 60, // Waybar width
+    "width": 40, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock","custom/line","clock#min"],
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["battery", "network", "tray"],
+    "modules-right": ["battery", "network", "tray", "custom/power"],
      "margin-top": 6,
     "margin-left": 6,
     "margin-bottom":6,
     // Modules configuration
-     "hyprland/workspaces": {
-    //     "disable-scroll": true,
-         //"all-outputs": true,
-         "format": "{icon}",
-         "format-icons": {
-             "1": "\udb82\udcc7",
-             "2": "\ue745",
-             "3": "\ue7aa",
-             "4": "\udb81\ude6f",
-             "5": "\ueb1c",
-             "6": "\udb80\udfb5",
-             "7": "\udb80\udfb8",
-             "8": "\udb80\udfbb",
-             "9": "\udb80\udfbe",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //         "active": ""
+    "hyprland/workspaces": {
+    //  "disable-scroll": true,
+        //"all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+             // "1": "\udb82\udcc7",
+             // "2": "\ue745",
+             // "3": "\ue7aa",
+             // "4": "\udb81\ude6f",
+             // "5": "\ueb1c",
+            // "6": "󰲪",
+            // "7": "󰲬",
+            // "8": "󰲮",
+            // "9": "󰲰",
+            // "urgent": "",
+            // "active": "",
+            // "default": "",
+            // "persistent": "",
+            "urgent": "󰁡",
+            "active": "󰫈",
+            "default": "󰋙",
+            "persistent": "󰋙"
+
          },
          "on-click":"activate",
          "persistent_workspaces": {
@@ -108,7 +113,7 @@
         "interval": 60,
         "format": "{:%H}",
         //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
         //"format-alt": "{:%Y-%m-%d}",
         "max-length": 25
     },
@@ -126,9 +131,9 @@
     // },
     "network": {
         "interval": 5,
-        "format-wifi": "\uf1eb",
-        "format-ethernet": "󰈀",
-        "format-disconnected": "\udb80\ude02",
+        "format-wifi": "󰛡",
+        "format-ethernet": "󰙭",
+        "format-disconnected": "󱃲",
         "tooltip-format": "{ifname}: {ipaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%): {ipaddr}",
         "on-click": "sh ~/scripts/rofi/network-manager/rofi-network-manager.sh"
@@ -161,13 +166,17 @@
             "critical": 15
         },
         "format": "{icon}",
-        //"format-charging": "\udb84\udea6",
+        "format-charging": "󰁡",
         // "format-plugged": "",
-        "format-alt": "{capacity}%",
+        "tooltip-format": "{capacity}%",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["\udb80\udc8e", "\udb84\udea1", "\udb84\udea2", "\udb84\udea3", "\udb85\udfe2"]
+        "format-full": "󰐭",
+        "format-icons": ["󰫃","󰫄","󰫅","󰫆","󰫇","󰫈"]
     },
+    "custom/power":{
+        "format":"󰤆",
+        "tooltip-format":"Power options",
+    }
     // "battery#bat2": {
     //     "bat": "BAT2"
     // },

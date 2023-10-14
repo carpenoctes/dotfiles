@@ -1,0 +1,45 @@
+[volume]
+    appname = Volym
+    format = "<span font='Agave Nerd Font Mono 18'>[%n%]</span>"
+    highlight = "#FF6200CC"
+    background = "#0d1b26CC"
+    foreground = "#FFFFFFCC"
+    frame_color = "#FF6200"
+    icon_position = left
+    history_ignore = yes
+    timeout = 3
+    alignment = right
+[volume_muted]
+    appname = Muter 
+    format = "<span font='Agave Nerd Font Mono 18'>[%s]</span>"
+    icon_position = left
+    alignment = right
+    history_ignore = yes
+    timeout = 3
+[discord]
+    desktop_entry = "discord"
+    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 16'>%s</span>\n%b"
+    timeout = 20
+[discord_ozz]
+    desktop_entry = "discord"
+    summary = Ozz*
+    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 16' foreground='#f78da4'>%s</span>\n%b"
+[discord_utopia]
+    desktop_entry = "discord"
+    summary = utopiabot*
+    background = "#0d1b26CC"
+    foreground = "#6db4c0"
+    frame_color = "#6db4c0"
+    format =   "<span font='Noto Sans italic 8' foreground='#6db4c0'>%a</span>\n<span foreground='#6db4c0' font='agave Nerd Font 16'>%s</span>\n%b"
+    timeout = 0
+[prisfaktamail]
+    appname= Thunderbird
+    summary= saddaf@prisfakta.se*
+    format = "<b><span font='Iosevka 16' foreground='#FF9E0E'>Prisfakta E-post</span></b>\n%b"
+[Schemata]
+    appname= Schemata
+    format="<span font='Noto Sans italic 8' foreground='#6394C5'>%a</span>\n<span foreground='#FFFFFF' font='agave Nerd Font 16'>%s</span>\n<span foreground='#86CB92' font='Iosevka 16'>%b</span>"
+[Spotify]
+    appname= Spotify
+    foreground = "#b1dfe7"
+    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 16' foreground='#55bccf'>%s</span>\n%b"

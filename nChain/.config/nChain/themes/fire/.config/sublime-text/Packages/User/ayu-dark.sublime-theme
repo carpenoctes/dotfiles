@@ -1,0 +1,332 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+	"variables":
+	{
+		"primary":"#FF6200",
+
+	},
+	"rules":
+	[
+		{
+			"class": "icon_folder",
+			"layer2.tint": "var(primary)" /*"var(primary)",*/
+		},
+		{
+			"class": "close_button",
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_folder",
+			"parents": [
+				{
+					"class": "tree_row",
+					"attributes": [
+						"hover"
+					]
+				}
+			],
+			"layer1.tint": "var()primary"
+		},
+		{
+			"class": "icon_folder",
+			"parents": [
+				{
+					"class": "tree_row",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer1.tint": "var(primary)"
+		},
+		{
+			"class": "icon_folder_loading",
+			"layer1.tint": "var(primary)",
+		},
+		{
+			"class": "icon_folder_dup",
+			"parents": [
+				{
+					"class": "tree_row",
+					"attributes": [
+						"hover"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "tab_control",
+			"attributes": [
+				"selected"
+			],
+			"settings": [
+				"!ui_separator"
+			],
+			"layer0.tint": "var(primary)",
+			"layer0.opacity": 1
+		},
+			{
+			"class": "tab_control",
+			"attributes": [
+				"hover"
+			],
+			"settings": [
+				"!ui_separator"
+			],
+			"layer0.tint": "var(primary)",
+			"layer0.opacity": 1
+		},
+			{
+			"class": "tab_label",
+			"settings": [
+				"highlight_modified_tabs"
+			],
+			"font.italic": true,
+			"attributes": [
+				"dirty"
+			],
+			"fg": "var(primary)"
+		},
+		{
+			"class": "tab_close_button",
+			"settings": [
+				"show_tab_close_buttons",
+				"highlight_modified_tabs"
+			],
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "tab_close_button",
+			"parents": [
+				{
+					"class": "tab_control",
+					"attributes": [
+						"selected",
+						"dirty"
+					]
+				}
+			],
+			"layer0.opacity": 0,
+			"layer1.opacity": 1,
+			"layer1.tint": "var(primary)"
+		},
+		{
+			"class": "scroll_tabs_left_button",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "scroll_tabs_right_button",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "show_tabs_dropdown_button",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "quick_panel_label",
+			"match_fg": "var(primary)",
+			"selected_match_fg": "var(primary)"
+		},
+		{
+			"class": "quick_panel_label",
+			"parents": [
+				{
+					"class": "overlay_control"
+				}
+			],
+			"match_fg": "var(primary)",
+			"selected_match_fg": "var(primary)"
+		},
+		{
+			"class": "fold_button_control",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "auto_complete_label",
+			"match_fg": "var(primary)",
+			"selected_match_fg": "var(primary)",
+		},
+		{
+			"class": "panel_close_button",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "panel_button_control",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "progress_gauge_control",
+			"layer0.tint": "var(primary)",
+		
+		},
+			{
+			"class": "dropdown_button_control",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "button_control",
+
+			"layer0.tint": "var(primary)",
+		},
+		{
+			"class": "icon_regex",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_case",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+			{
+			"class": "icon_whole_word",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_wrap",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_in_selection",
+			"layer0.tint": "#565b66",
+		},
+		{
+			"class": "icon_in_selection",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_highlight",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_preserve_case",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+			{
+			"class": "icon_context",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_use_buffer",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "icon_use_gitignore",
+			"parents": [
+				{
+					"class": "icon_button_control",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "sidebar_button_control",
+			"attributes": [
+				"hover"
+			],
+			"layer0.tint": "var(primary)"
+		},
+		{
+			"class": "title_label_control",
+			"color": "var(primary)"
+		},
+	]
+}
