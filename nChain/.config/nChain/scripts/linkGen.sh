@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-target_dir="$HOME"
+target_dir="/"
 
 # Function to add symlinks and directories
 

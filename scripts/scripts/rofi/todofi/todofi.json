@@ -1,13 +1,30 @@
 {
     "tasks": [
         {
+            "caption": "Billing inloggningssystem s\u00e4kerhet",
+            "comment": "",
+            "created": "2023-10-20",
+            "group": "+Prisfakta",
+            "priority": "2",
+            "status": "todo",
+            "tags": "#s\u00e4kerhet"
+        },
+        {
             "caption": "S\u00e4kerst\u00e4ll att r\u00e4ntor/priser sparas vid uppdateringar",
             "comment": "G\u00e4ller f\u00f6r mobiltelefoni och telekom",
             "created": "2023-06-26",
             "group": "+Prisfakta",
-            "priority": 1,
+            "priority": 2,
             "status": "todo",
             "tags": "#underh\u00e5ll"
+        },
+        {
+            "caption": "S\u00e4kerst\u00e4ll k\u00f6rning under PHP 8.2",
+            "created": "2023-06-26",
+            "group": "+Prisfakta",
+            "priority": 2,
+            "status": "todo",
+            "tags": "#scripts, #underh\u00e5ll"
         },
         {
             "caption": "\u00d6verg\u00e5ng fr\u00e5n mysqli till prepared statements",
@@ -19,33 +36,6 @@
             "tags": "#s\u00e4kerhet"
         },
         {
-            "caption": "SEO-strategi med corenerstone content f\u00f6r vpn",
-            "comment": "",
-            "created": "2023-10-03",
-            "group": "+Skyddad",
-            "priority": "2",
-            "status": "todo",
-            "tags": "#seo"
-        },
-        {
-            "caption": "SEO-strategi med corner stone content f\u00f6r antivirus",
-            "comment": "",
-            "created": "2023-10-03",
-            "group": "+Skyddad",
-            "priority": "2",
-            "status": "todo",
-            "tags": "#seo"
-        },
-        {
-            "caption": "SEO-strategi med cornerstone content f\u00f6r ID-skydd",
-            "comment": "",
-            "created": "2023-10-03",
-            "group": "+Skyddad",
-            "priority": "2",
-            "status": "todo",
-            "tags": "#seo"
-        },
-        {
             "caption": "Uppdatera j\u00e4mf\u00f6relse till B\u00e4st i test",
             "comment": "",
             "created": "2023-10-03",
@@ -55,31 +45,13 @@
             "tags": "#artikel"
         },
         {
-            "caption": "Dokumentation Bevakning",
+            "caption": "\u00c4ndra id-kapning till identitetsst\u00f6ld",
             "comment": "",
-            "created": "2023-06-26",
-            "group": "+Prisfakta",
-            "priority": 3,
+            "created": "2023-10-03",
+            "group": "+Skyddad",
+            "priority": 2,
             "status": "todo",
-            "tags": "#periferaSystem, #dokumentation"
-        },
-        {
-            "caption": "Dokumentation av Prisfaktas webbsidor",
-            "comment": "",
-            "created": "2023-06-26",
-            "group": "+Prisfakta",
-            "priority": 3,
-            "status": "todo",
-            "tags": "#dokumentation"
-        },
-        {
-            "caption": "Dokumentera olika metoder f\u00f6r feeds",
-            "comment": "feeds f\u00f6r partners",
-            "created": "2023-06-26",
-            "group": "+Prisfakta",
-            "priority": 3,
-            "status": "todo",
-            "tags": "#dokumentation"
+            "tags": "#artikel"
         },
         {
             "caption": "Rensa bort gamla tabeller fr\u00e5n databaser",
@@ -109,6 +81,15 @@
             "tags": "#scripts, #underh\u00e5ll"
         },
         {
+            "caption": "Uppdatera cookiehantering och texter",
+            "comment": "",
+            "created": "2023-06-26",
+            "group": "+Prisfakta",
+            "priority": 3,
+            "status": "todo",
+            "tags": "#gdpr, #underh\u00e5ll"
+        },
+        {
             "caption": "L\u00e4gg text fr\u00e5n N\u00e4that hat p\u00e5 n\u00e4tet till S\u00e5 skyddar du dig sj\u00e4lv...",
             "comment": "",
             "created": "2023-10-03",
@@ -127,16 +108,52 @@
             "tags": "#underh\u00e5ll"
         },
         {
-            "caption": "\u00c4ndra id-kapning till identitetsst\u00f6ld",
+            "caption": "SEO-strategi med corenerstone content f\u00f6r vpn",
             "comment": "",
             "created": "2023-10-03",
             "group": "+Skyddad",
-            "priority": "3",
+            "priority": 3,
             "status": "todo",
-            "tags": "#artikel"
+            "tags": "#seo"
+        },
+        {
+            "caption": "SEO-strategi med corner stone content f\u00f6r antivirus",
+            "comment": "",
+            "created": "2023-10-03",
+            "group": "+Skyddad",
+            "priority": 3,
+            "status": "todo",
+            "tags": "#seo"
+        },
+        {
+            "caption": "SEO-strategi med cornerstone content f\u00f6r ID-skydd",
+            "comment": "",
+            "created": "2023-10-03",
+            "group": "+Skyddad",
+            "priority": 3,
+            "status": "todo",
+            "tags": "#seo"
+        },
+        {
+            "caption": "Dokumentation Bevakning",
+            "comment": "",
+            "created": "2023-06-26",
+            "group": "+Prisfakta",
+            "priority": 4,
+            "status": "todo",
+            "tags": "#periferaSystem, #dokumentation"
         },
         {
             "caption": "Dokumentation Billing",
+            "comment": "",
+            "created": "2023-06-26",
+            "group": "+Prisfakta",
+            "priority": 4,
+            "status": "todo",
+            "tags": "#dokumentation"
+        },
+        {
+            "caption": "Dokumentation av Prisfaktas webbsidor",
             "comment": "",
             "created": "2023-06-26",
             "group": "+Prisfakta",
@@ -163,13 +180,13 @@
             "tags": "#gdpr, #underh\u00e5ll"
         },
         {
-            "caption": "Uppdatera cookiehantering och texter",
-            "comment": "",
+            "caption": "Dokumentera olika metoder f\u00f6r feeds",
+            "comment": "feeds f\u00f6r partners",
             "created": "2023-06-26",
             "group": "+Prisfakta",
             "priority": 4,
             "status": "todo",
-            "tags": "#gdpr, #underh\u00e5ll"
+            "tags": "#dokumentation"
         },
         {
             "caption": "Flytta H\u00e4lsofakta till Oderland",
@@ -245,14 +262,6 @@
         },
         {
             "caption": "Samla alla scripts p\u00e5 ett st\u00e4lle",
-            "created": "2023-06-26",
-            "group": "+Prisfakta",
-            "priority": 6,
-            "status": "todo",
-            "tags": "#scripts, #underh\u00e5ll"
-        },
-        {
-            "caption": "S\u00e4kerst\u00e4ll k\u00f6rning under PHP 8.2",
             "created": "2023-06-26",
             "group": "+Prisfakta",
             "priority": 6,
