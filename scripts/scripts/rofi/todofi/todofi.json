@@ -10,6 +10,15 @@
             "tags": "#s\u00e4kerhet"
         },
         {
+            "caption": "Separera produktion/utvecklingsmilj\u00f6",
+            "comment": "",
+            "created": "2023-11-02",
+            "group": "+Prisfakta",
+            "priority": "2",
+            "status": "todo",
+            "tags": "#s\u00e4kerhet"
+        },
+        {
             "caption": "S\u00e4kerst\u00e4ll att r\u00e4ntor/priser sparas vid uppdateringar",
             "comment": "G\u00e4ller f\u00f6r mobiltelefoni och telekom",
             "created": "2023-06-26",

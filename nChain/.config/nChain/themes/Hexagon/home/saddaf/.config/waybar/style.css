@@ -13,56 +13,61 @@ window#waybar {
 window#waybar.hidden {
     opacity: 0.2;
 }
-.modules-left{margin-top: 3px}
-.modules-right{margin-bottom: 3px}
+.modules-left{margin-top: 3px;
+    background: rgba(23,42,58,0.5);}
+.modules-right{
+    margin-bottom: 3px;
+    background-color: rgba(23,42,58,0.5);
+}
 #window {
     margin-top: 6px;
     padding-left: 10px;
-    padding-right: 0px;
+    padding-right: 10px;
     border-radius: 6px;
     transition: none;
     color: transparent;
     background: transparent;
 }
 #workspaces {
-/*    margin-top: 6px;*/
-/*    margin-left: 12px;*/
-/*    margin-bottom: 0px;*/
+    margin-top: 6px;
+    margin-left: 12px;
+    margin-bottom: 0px;
     border-radius: 10px;
-    background: rgba(22, 19, 32,0.6);
     transition: none;
-    font-size: 48px;
+    font-size: 32px;
 }
 
 #workspaces button {
     transition: none;
-    color: #6b94bd;
+    color: rgba(85,189,207,0.4);
     background: transparent;
-    border-radius: 4px;
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
+    
     padding:4px;
+    border-radius: 0;
+    border-left: 2px solid #f78da4;
+    border-right: 2px solid #f78da4;
 }
 #workspaces button:first-child{
-/*    margin-left: 10px;*/
+    border-radius: 6px 6px 0 0;
 }
 #workspaces button:last-child{
-    /*padding-left: 8px;
-    padding-right: 20px;*/
+    border-radius: 0 0 6px 6px;
 }
 #workspaces button.occupied {
     transition: none;
-    color: #D898D8;
+    color: #F79E8D;
     background: transparent;
     font-size: 4px;
 }
 #workspaces button.persistent {
-    color: rgba(51, 75, 99,0.8);
+    color: rgba(114, 186, 172, 0.8);
 }
-
-#workspaces button.active {
-    color: #8d649d;
-    border-color: #8d649d;
+#workspaces button.empty {
+    color: rgba(114, 186, 172, 0.2);
+}
+#workspaces button.active,
+#workspaces button.visible {
+    color: #f78da4;
 }
 #workspaces button.urgent {
     color: #FF7B89;
@@ -73,20 +78,16 @@ window#waybar.hidden {
     transition: none;
     box-shadow: inherit;
     text-shadow: inherit;
-    border-color: #86CB92;
-    color: #86CB92;
+    border-color: #6db4c0;
+    color: #55bccf;
 }
 
 #mode {
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;
 }
-.modules-right{
-    background-color: rgba(51, 75, 99,0.8);
 
-}
 #clock,
-#battery,
 #cpu,
 #memory,
 #disk,
@@ -100,18 +101,22 @@ window#waybar.hidden {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#battery
+#battery,
+#custom-power,
 #mpd {
-    padding: 6px 0px;
-    color: #B1C9E0;
+    padding: 4px 0px;
+    color: #b1dfe7;
     font-size: 32px;
 }
-#clock{ font-size:32px; padding:0;color: #ffffff;}
+#clock{ font-size:24px; padding:0;color: #ffffff;}
 #custom-line{
-    color:#ddd;
-    font-size: 32px;
+    color:#f78da4;
+    font-size: 24px;
 }
-#network{font-size: 48px}
+#custom-power{
+    color:#55bccf;
+}
+#network{font-size: 32px}
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
@@ -126,12 +131,18 @@ window#waybar.hidden {
 @keyframes blink {
     to {
         background-color: unset;
-        color: #FF0000;
+        color: #FF7B89;
     }
 }
-
+#battery {
+    background-color: unset;
+}
+#battery.critical {
+    background-color: #FF7B89;
+    color: #FFFFFF;
+}
 #battery.critical:not(.charging) {
-    background-color: #6394C5;
+    background-color: #FF7B89;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 1s;
@@ -145,8 +156,7 @@ label:focus {
 }
 
 #tray {
-/*    background-color: #2980b9;*/
-    font-size: 32px;
+    font-size: 24px;
 }
 
 #tray > .passive {
@@ -155,5 +165,5 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: #FF7B89;
 }

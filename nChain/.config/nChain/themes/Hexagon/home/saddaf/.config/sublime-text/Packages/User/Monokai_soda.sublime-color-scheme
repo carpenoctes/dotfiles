@@ -2,7 +2,7 @@
 {
 	"variables":
 	{
-        "comments":	"#6F7487",			//bluish grey - comments
+		"comments":	"#6F7487",			//bluish grey - comments
 		"keywords": "#35DBBA",			//teal - keywords and storage
 		"builtin": 	"#EB94B7",			//light pink - builtin functions
 		"functions":"#FF7b89",			//pink - user functions and calls to those
@@ -21,13 +21,14 @@
 		"yellow": 	"var(strings)",
 		"yellow2": 	"var(arguments)",		//because the green is ugly
 		"orange": 	"var(arguments)",	
-		"yellow5": 	"var(comments)"
+		"yellow5": 	"var(comments)",
+        "red2":     "#f92672",
 	},
 	"globals":
-    {
+	{
         "background":"#10141C",
         "foreground":"#bfbdb6"
-    },
+	},
 	"rules":
 	[
 		 {
@@ -129,6 +130,6 @@
             "name": "Storage",
             "scope": "storage",
             "foreground": "var(keywords)"
-        },
+        }
 	]
 }

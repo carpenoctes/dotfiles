@@ -2,7 +2,7 @@
 {
 	"variables":
 	{
-        "comments":	"#6F7487",			//bluish grey - comments
+		"comments":	"#6F7487",			//bluish grey - comments
 		"keywords": "#35DBBA",			//teal - keywords and storage
 		"builtin": 	"#EB94B7",			//light pink - builtin functions
 		"functions":"#FF7b89",			//pink - user functions and calls to those
@@ -16,21 +16,22 @@
 		"black3": 	"#292C33",
 		"black2": 	"#1e1f22",
         "white3":   "#DBDEE1",
+        "firebackground": "#10141c",
 		"blue": 	"var(support)",
 		"purple": 	"var(values)",		
 		"yellow": 	"var(strings)",
 		"yellow2": 	"var(arguments)",		//because the green is ugly
 		"orange": 	"var(arguments)",	
-		"yellow5": 	"var(comments)"
+        "yellow5":  "var(comments)",
+		"red2": 	"#FF0000"
 	},
 	"globals":
-    {
-        "background":"#10141C",
-        "foreground":"#bfbdb6"
-    },
+	{
+        "background": "#151724"
+	},
 	"rules":
 	[
-		 {
+		{
             "name": "Functions def",
             "scope": "entity.name.function",
             "font_style": "italic",

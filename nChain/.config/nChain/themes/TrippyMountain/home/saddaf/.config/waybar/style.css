@@ -1,0 +1,945 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: 'Agave Nerd Font Mono',Roboto;
+    /* font-size: 20px; */
+    min-height: 10px;
+}
+
+window#waybar {
+    background: rgba(16, 4, 4, 0.2);
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* .modules-left { */
+/*     background: rgba(51, 87, 121, 0.4)  */
+/* } */
+/**/
+/* .modules-center { */
+/*     background: rgba(120, 120, 120, 0.4) */
+/* } */
+/**/
+/* .modules-right { */
+/*     background: rgba(161, 46, 94, 0.4) */
+/* } */
+
+#window {
+    margin-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+#workspaces {
+    margin-top: 6px;
+    margin-left: 12px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    font-size: 32px;
+}
+#workspaces button {
+    transition: none;
+    color: #F28FAD;
+    background: transparent;
+    font-size: 32px;
+    border-radius: 4px;
+}
+
+#workspaces button:first-child{
+    margin-left: 0px;
+}
+
+#workspaces button:last-child{
+    margin-right: 0px;
+}
+
+
+#workspaces button.persistent {
+    color: #d13148;
+}
+#workspaces button.empty {
+    color: #3c485d;
+}
+#workspaces button.occupied {
+    transition: none;
+    color: #F28FAD;
+    background: transparent;
+}
+#workspaces button.active{
+    color: #5fbdbc;
+    /*font-size: 32px;*/
+}
+#workspaces button.visible {
+    color: #5fbdbc;
+}
+
+#workspaces button.urgent {
+    color: #f2c97d;
+    border-color: #f2c97d;
+}
+
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-color: #f2c97d;
+    color: #f2c97d;
+}
+
+#workspaces button.active:hover {
+/*    color: #009fb7;*/
+    border-color: #f2c97d;
+}
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#custom-power,
+#mpd {
+    padding: 8px 10px;
+    color: #5fbdbc;
+    font-size: 32px;
+}
+#clock{ padding: 0; font-size: 20px; color:#FFF }
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: unset;
+        color: #FF0000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #6394C5;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+/*    animation-direction: alternate;*/
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    color: #d13148;
+}
+
+#tray {
+    background-color: #987081;
+    font-size: 16px;
+}
+
+#battery {
+    padding: 0 10px;
+    color: #5fbdbc;
+    background-color: transparent;
+}
+#network {
+    padding: 0 10px;
+    color: #5fbdbc;
+}
+
+#custom-time {
+    padding: 0 10px;
+    color: #5fbdbc;
+}
+#custom-line{
+    color:#f78da4;
+    font-size: 24px;
+}
+#custom-power{
+    color:#55bccf;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+#custom-media {
+    /* background-color: #66cc99; */
+    color: #e85649;
+    font-size: 14 ;
+    min-width: 50px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-pctl-prev {
+    color: #d13148;
+}
+
+#custom-pctl-next {
+    color: #d13148;
+}
+
+#custom-playerctl {
+    padding: 0px;
+    font-size: 16;
+}
+#custom-playerctl.0 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 0%,
+		transparent 0.1%
+	);
+}
+#custom-playerctl.1 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 1%,
+		transparent 1.1%
+	);
+}
+#custom-playerctl.2 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 2%,
+		transparent 2.1%
+	);
+}
+#custom-playerctl.3 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 3%,
+		transparent 3.1%
+	);
+}
+#custom-playerctl.4 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 4%,
+		transparent 4.1%
+	);
+}
+#custom-playerctl.5 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 5%,
+		transparent 5.1%
+	);
+}
+#custom-playerctl.6 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 6%,
+		transparent 6.1%
+	);
+}
+#custom-playerctl.7 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 7%,
+		transparent 7.1%
+	);
+}
+#custom-playerctl.8 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 8%,
+		transparent 8.1%
+	);
+}
+#custom-playerctl.9 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 9%,
+		transparent 9.1%
+	);
+}
+#custom-playerctl.10 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 10%,
+		transparent 10.1%
+	);
+}
+#custom-playerctl.11 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 11%,
+		transparent 11.1%
+	);
+}
+#custom-playerctl.12 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 12%,
+		transparent 12.1%
+	);
+}
+#custom-playerctl.13 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 13%,
+		transparent 13.1%
+	);
+}
+#custom-playerctl.14 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 14%,
+		transparent 14.1%
+	);
+}
+#custom-playerctl.15 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 15%,
+		transparent 15.1%
+	);
+}
+#custom-playerctl.16 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 16%,
+		transparent 16.1%
+	);
+}
+#custom-playerctl.17 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 17%,
+		transparent 17.1%
+	);
+}
+#custom-playerctl.18 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 18%,
+		transparent 18.1%
+	);
+}
+#custom-playerctl.19 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 19%,
+		transparent 19.1%
+	);
+}
+#custom-playerctl.20 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 20%,
+		transparent 20.1%
+	);
+}
+#custom-playerctl.21 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 21%,
+		transparent 21.1%
+	);
+}
+#custom-playerctl.22 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 22%,
+		transparent 22.1%
+	);
+}
+#custom-playerctl.23 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 23%,
+		transparent 23.1%
+	);
+}
+#custom-playerctl.24 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 24%,
+		transparent 24.1%
+	);
+}
+#custom-playerctl.25 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 25%,
+		transparent 25.1%
+	);
+}
+#custom-playerctl.26 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 26%,
+		transparent 26.1%
+	);
+}
+#custom-playerctl.27 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 27%,
+		transparent 27.1%
+	);
+}
+#custom-playerctl.28 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 28%,
+		transparent 28.1%
+	);
+}
+#custom-playerctl.29 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 29%,
+		transparent 29.1%
+	);
+}
+#custom-playerctl.30 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 30%,
+		transparent 30.1%
+	);
+}
+#custom-playerctl.31 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 31%,
+		transparent 31.1%
+	);
+}
+#custom-playerctl.32 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 32%,
+		transparent 32.1%
+	);
+}
+#custom-playerctl.33 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 33%,
+		transparent 33.1%
+	);
+}
+#custom-playerctl.34 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 34%,
+		transparent 34.1%
+	);
+}
+#custom-playerctl.35 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 35%,
+		transparent 35.1%
+	);
+}
+#custom-playerctl.36 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 36%,
+		transparent 36.1%
+	);
+}
+#custom-playerctl.37 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 37%,
+		transparent 37.1%
+	);
+}
+#custom-playerctl.38 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 38%,
+		transparent 38.1%
+	);
+}
+#custom-playerctl.39 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 39%,
+		transparent 39.1%
+	);
+}
+#custom-playerctl.40 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 40%,
+		transparent 40.1%
+	);
+}
+#custom-playerctl.41 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 41%,
+		transparent 41.1%
+	);
+}
+#custom-playerctl.42 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 42%,
+		transparent 42.1%
+	);
+}
+#custom-playerctl.43 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 43%,
+		transparent 43.1%
+	);
+}
+#custom-playerctl.44 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 44%,
+		transparent 44.1%
+	);
+}
+#custom-playerctl.45 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 45%,
+		transparent 45.1%
+	);
+}
+#custom-playerctl.46 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 46%,
+		transparent 46.1%
+	);
+}
+#custom-playerctl.47 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 47%,
+		transparent 47.1%
+	);
+}
+#custom-playerctl.48 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 48%,
+		transparent 48.1%
+	);
+}
+#custom-playerctl.49 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 49%,
+		transparent 49.1%
+	);
+}
+#custom-playerctl.50 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 50%,
+		transparent 50.1%
+	);
+}
+#custom-playerctl.51 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 51%,
+		transparent 51.1%
+	);
+}
+#custom-playerctl.52 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 52%,
+		transparent 52.1%
+	);
+}
+#custom-playerctl.53 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 53%,
+		transparent 53.1%
+	);
+}
+#custom-playerctl.54 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 54%,
+		transparent 54.1%
+	);
+}
+#custom-playerctl.55 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 55%,
+		transparent 55.1%
+	);
+}
+#custom-playerctl.56 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 56%,
+		transparent 56.1%
+	);
+}
+#custom-playerctl.57 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 57%,
+		transparent 57.1%
+	);
+}
+#custom-playerctl.58 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 58%,
+		transparent 58.1%
+	);
+}
+#custom-playerctl.59 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 59%,
+		transparent 59.1%
+	);
+}
+#custom-playerctl.60 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 60%,
+		transparent 60.1%
+	);
+}
+#custom-playerctl.61 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 61%,
+		transparent 61.1%
+	);
+}
+#custom-playerctl.62 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 62%,
+		transparent 62.1%
+	);
+}
+#custom-playerctl.63 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 63%,
+		transparent 63.1%
+	);
+}
+#custom-playerctl.64 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 64%,
+		transparent 64.1%
+	);
+}
+#custom-playerctl.65 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 65%,
+		transparent 65.1%
+	);
+}
+#custom-playerctl.66 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 66%,
+		transparent 66.1%
+	);
+}
+#custom-playerctl.67 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 67%,
+		transparent 67.1%
+	);
+}
+#custom-playerctl.68 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 68%,
+		transparent 68.1%
+	);
+}
+#custom-playerctl.69 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 69%,
+		transparent 69.1%
+	);
+}
+#custom-playerctl.70 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 70%,
+		transparent 70.1%
+	);
+}
+#custom-playerctl.71 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 71%,
+		transparent 71.1%
+	);
+}
+#custom-playerctl.72 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 72%,
+		transparent 72.1%
+	);
+}
+#custom-playerctl.73 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 73%,
+		transparent 73.1%
+	);
+}
+#custom-playerctl.74 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 74%,
+		transparent 74.1%
+	);
+}
+#custom-playerctl.75 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 75%,
+		transparent 75.1%
+	);
+}
+#custom-playerctl.76 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 76%,
+		transparent 76.1%
+	);
+}
+#custom-playerctl.77 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 77%,
+		transparent 77.1%
+	);
+}
+#custom-playerctl.78 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 78%,
+		transparent 78.1%
+	);
+}
+#custom-playerctl.79 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 79%,
+		transparent 79.1%
+	);
+}
+#custom-playerctl.80 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 80%,
+		transparent 80.1%
+	);
+}
+#custom-playerctl.81 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 81%,
+		transparent 81.1%
+	);
+}
+#custom-playerctl.82 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 82%,
+		transparent 82.1%
+	);
+}
+#custom-playerctl.83 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 83%,
+		transparent 83.1%
+	);
+}
+#custom-playerctl.84 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 84%,
+		transparent 84.1%
+	);
+}
+#custom-playerctl.85 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 85%,
+		transparent 85.1%
+	);
+}
+#custom-playerctl.86 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 86%,
+		transparent 86.1%
+	);
+}
+#custom-playerctl.87 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 87%,
+		transparent 87.1%
+	);
+}
+#custom-playerctl.88 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 88%,
+		transparent 88.1%
+	);
+}
+#custom-playerctl.89 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 89%,
+		transparent 89.1%
+	);
+}
+#custom-playerctl.90 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 90%,
+		transparent 90.1%
+	);
+}
+#custom-playerctl.91 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 91%,
+		transparent 91.1%
+	);
+}
+#custom-playerctl.92 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 92%,
+		transparent 92.1%
+	);
+}
+#custom-playerctl.93 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 93%,
+		transparent 93.1%
+	);
+}
+#custom-playerctl.94 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 94%,
+		transparent 94.1%
+	);
+}
+#custom-playerctl.95 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 95%,
+		transparent 95.1%
+	);
+}
+#custom-playerctl.96 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 96%,
+		transparent 96.1%
+	);
+}
+#custom-playerctl.97 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 97%,
+		transparent 97.1%
+	);
+}
+#custom-playerctl.98 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 98%,
+		transparent 98.1%
+	);
+}
+#custom-playerctl.99 {
+	background-image: linear-gradient(
+		to right,
+		rgba(54, 30, 32, 1) 99%,
+		transparent 99.1%
+	);
+}
