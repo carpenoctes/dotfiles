@@ -1,0 +1,10 @@
+* {
+    bg1:        #0c1325;      // message box bg and entry bg
+    bg2:        #0c1325CC;      // todofi background color
+    primary:    #3c485d;        // inputbar border and text
+    secondary:  #d13148;        // selected element + prompt
+    tertiary:   #b1dfe7;        // todofi main text
+    strongtext: #d13148;        // message text + input text
+    weaktext:   #72CCBB;      // normal elements + todofi message text + frame around message box + placeholder text
+    bggradient: linear-gradient(to top, #15233499, #152334FF);  //body
+}

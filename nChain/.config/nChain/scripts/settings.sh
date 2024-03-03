@@ -13,16 +13,20 @@ pre_commands=(
 )
 
 post_commands=(
-  "bash nChain.sh -l default"
+  "bash nChain.sh -l AmethystDusk"
   "killall waybar"
-  "killall wbg"
+  #"killall swww"
   
   "waybar &"
-  "wbg /home/saddaf/wallpapers/desktop.jpg &"
+  "swww img --transition-type=wipe --transition-fps 60 /home/saddaf/wallpapers/desktop.jpg &"
   "nwg-look -a"
   "cd /home/saddaf/.config/dunst"
   "sh dunstmerge top-right"
   "kill $(pidof dunst)"
+  'for file in /home/saddaf/.config/nChain/links/*; do [ "$(basename "$file")" != "AmethystDusk" ] && [ -f "$file" ] && filename=$(basename "$file") && filename="${filename^}" && notify-send -a "nChain" "Theme: $filename"; done'
+  'dunstify -a "Muter" -i audio-volume-muted -r 2593 "Volume muted!"'
+  'notify-send -a "nChain" -u critical "Urgent" "This is an urgent message!"'
+  'notify-send -a "nChain" -u low "Another message" "This is a low priority message"'
   # "$HOME/.config/nChain/scripts/notify-send.sh &"
   # "kitty @ all set-colors -a -c $HOME/.config/kitty/theme.conf"
   #~/Documents/miniprojects/nChain/nChain.sh

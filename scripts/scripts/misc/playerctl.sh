@@ -10,15 +10,15 @@ while true; do
 		artist=${artist:1} title=${title:1} arturl=${arturl:1} hpos=${hpos:1} hlen=${hlen:1}
 
 		# build line
-		line="${artist:+$artist ${title:+- }}${title:+$title }${hpos:+$hpos${hlen:+|}}$hlen"
+		line="${artist:+$artist ${title:+- }}${title:+$title }${hpos:+$hpos${hlen:+ | }}$hlen"
 
 		# json escaping
 		line="${line//\"/\\\"}"
 		((percentage = length ? (100 * (position % length)) / length : 0))
 		case $playing in
-		⏸️ | Paused) text='<span foreground=\"#DEA59E\" size=\"smaller\">'" 󰏥 ""$line"'</span>' ;;
-		▶️ | Playing) text='<span foreground=\"#DEA59E\" size=\"smaller\">'" 󰐌 ""$line"'</span>' ;;
-		*) text='<span foreground=\"#DEA59E\"></span>' ;;
+		⏸️ | Paused) text='<span size=\"medium\">'" 󰏥   ""$line"'</span>' ;;
+		▶️ | Playing) text='<span size=\"medium\">'" 󰐌   ""$line"'</span>' ;;
+		*) text='<span></span>' ;;
 		esac
 
 		# integrations for other services (nwg-wrapper)
@@ -42,7 +42,7 @@ while true; do
 
 	# no current players
 	# exit if print fails
-	echo '<span foreground=#DEA59E>⏹</span>' || break
+	echo '<span>⏹</span>' || break
 	sleep 10
 
 done

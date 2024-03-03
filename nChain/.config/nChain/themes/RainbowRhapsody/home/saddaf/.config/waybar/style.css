@@ -1,0 +1,210 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: 'Baumans', 'Agave Nerd Font Mono',Roboto;
+/*    font-size: 24px;*/
+    min-height: 10px;
+}
+
+window#waybar {
+    background: transparent;
+    background-image: linear-gradient(to left, #000011, #000005, #000011);
+    border: 1px solid rgba(45, 151, 255, 0.2);
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+.modules-left{margin: 3px 10px;}
+    
+.modules-right{
+    margin-bottom: 13px;
+}
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#window {
+/*    margin-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;*/
+    border-radius: 6px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+#workspaces {
+/*    margin-top: 6px;
+    margin-left: 12px;
+    margin-bottom: 0px;*/
+    border-radius: 10px;
+    transition: none;
+    font-size: 32px;
+}
+
+#workspaces button {
+    transition: none;
+    padding:6px;
+    margin:6px 0;
+    border-radius: 3px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 20px;
+    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/onlyoffice.svg');
+
+}
+#workspaces button:first-child{ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/terminix.svg');}
+#workspaces button:first-child{ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/distributor-logo-archlinux.svg');}
+#workspaces button:first-child{ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/de.haeckerfelix.Fragments.svg');}
+#workspaces button:nth-child(2){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/dconf-editor.svg');}
+#workspaces button:nth-child(2){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/firefox.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/com.gexperts.Terminix.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/terminal-tango.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/nvim.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/io.elementary.code.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/stremio.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/mimetypes/scalable/application-json.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/sublime.svg');}
+#workspaces button:nth-child(3){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/wps-office-etmain.svg');}
+#workspaces button:nth-child(4){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/cliq.svg');}
+#workspaces button:nth-child(4){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/discord-canary.svg');}
+#workspaces button:nth-child(5){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/telegram.svg');} /*blue*/
+#workspaces button:nth-child(5){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/pencil.svg');}
+#workspaces button:nth-child(5){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/thunderbird.svg');}
+#workspaces button:nth-child(5){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/shadowsocks-qt5.svg');}
+#workspaces button:nth-child(5){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/org.kde.neochat.svg');}
+#workspaces button:nth-child(6){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/audio-player.svg');}
+#workspaces button:nth-child(6){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/odio.svg');}
+#workspaces button:nth-child(6){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/spotify.svg');}
+#workspaces button:nth-child(6){ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/deepin-system-monitor.svg');}
+
+#workspaces button:first-child{
+    border-radius: 6px 6px 0 0;
+}
+#workspaces button:last-child{
+    border-radius: 0 0 6px 6px;
+}
+/*#workspaces button.occupied {
+}
+#workspaces button.persistent {
+    color: rgba(114, 186, 172, 0.8);
+}
+#workspaces button.empty {
+    color: rgba(114, 186, 172, 0.2);
+}
+#workspaces button.active,
+#workspaces button.visible {
+    color: #f78da4;
+}
+#workspaces button.urgent {
+    color: #FF7B89;
+    border-color: #FF7B89;
+}*/
+
+#workspaces button:hover {
+    background-color: transparent;/*
+   background-image: url('/home/saddaf/.local/share/.icons/candy-icons/preferences/scalable/preferences-desktop-cursors.svg');
+   background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/plasma-search.svg');
+   background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/wcm.svg');*/
+   background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/homebank.svg');
+   margin:2px;
+   padding:10px;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#battery,
+#custom-power,
+#mpd {
+    margin: 4px;
+    color: #b1dfe7;
+    font-size: 32px;
+    font-size: 24px;
+}
+#clock{ font-size:24px; padding:0;color: #ffffff;}
+#custom-line{
+    color:#2d97FF;
+    font-size: 32px;
+}
+#custom-power{
+    color:#55bccf;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/gnome-session.svg');
+}
+#network{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/drawio.svg');
+}
+#network.disconnected{background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/update-manager.svg');} /*prusaslicer*/
+#network.ethernet{background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/drawio.svg');}
+#network.wifi{background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/julia.svg');}
+
+@keyframes blink {
+    to {
+        background-color: unset;
+        color: #FF7B89;
+    }
+}
+#battery{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/nut-monitor.svg');
+}
+#battery:not(.charging) { background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/usb-creator-kde.svg');}
+#battery.full{ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/mate-power-manager.svg');}
+#battery.full{ background-image: url('/home/saddaf/.local/share/.icons/candy-icons/devices/scalable/battery.svg');}
+#battery.good { background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/media-downloader.svg');}/*devices ->battery.svg*/
+#battery.warning { background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/gnome-logs.svg');}
+#battery.critical { background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/gnome-warning.svg');}
+#battery.charging { background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/nut-monitor.svg');}
+#battery.critical:not(.charging) {
+    background-color: #FF7B89;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/gnome-warning.svg');
+}
+label:focus {
+    background-color: #000000;
+}
+#tray {
+    /*font-size: 24px;*/
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #FF7B89;
+}

@@ -31,11 +31,11 @@
             // "active": "",
             // "default": "",
             // "persistent": "",
-            "urgent": "󰁡",
-            "active": "󰮯",
-            "default": "󱙝",
-            "persistent": "󱙝"
-            //󰍆 󰋙 󱠧  󰭃 󰛸 󰲴 󰲵 󰜗 󰖌 󰗀               󰡖  󰒓 󰆣 󰆤 󰱰 󰚜 󰇷 󰱵 󰊹     󰔉 󰻿 󰋲 󰲴 󰲵  󱙝 󰮯
+            "urgent": "",
+            "active": "󰆤",
+            "default": "",
+            "persistent": ""
+            //󰍆 󰋙 󱠧  󰭃 󰛸 󰲴 󰲵 󰜗 󰖌 󰗀               󰡖  󰒓 󰆣 󰆤 󰱰 󰚜 󰇷 󰱵 󰊹     󰔉 󰻿 󰋲 󰲴 󰲵  󱙝 󰮯 
 
          },
          "on-click":"activate",
@@ -178,7 +178,8 @@
         "format":"󰤆",
         "tooltip-format":"Power options",
         "on-click": "rofi -show powermenu -modi powermenu:~/scripts/rofi/power-menu/rofi-power-menu.sh -p 'Sleepy time' -theme-str 'window{width: '380'px;}'"
-    }
+    },
+
     // "battery#bat2": {
     //     "bat": "BAT2"
     // },
