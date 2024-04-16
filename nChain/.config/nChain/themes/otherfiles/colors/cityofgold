@@ -1,0 +1,6 @@
+Waybar
+clock + custom-playerctl +hover: #DC7C79 - Light coral 
+active: #D26A6A - Indian Red
+occupied: #FAAFA5 - Melon
+empty: #FAC478 - Earth yellow
+power + pulseaudio: #45688A - Lapis Lazuli 

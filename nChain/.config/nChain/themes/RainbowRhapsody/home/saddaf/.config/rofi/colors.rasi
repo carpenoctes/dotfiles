@@ -8,4 +8,5 @@
     weaktext:   #2d97FF;      // normal elements + todofi message text + frame around message box + placeholder text
     bggradient: linear-gradient(to top, #000011CC, #000022FF);  //body
     colorful: linear-gradient(180deg, #FF3853, #2d97FF, #3DF1AA);
+    myfont:     "Baumans 14";
 }

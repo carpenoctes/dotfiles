@@ -1,19 +1,14 @@
 * {
     border: none;
     border-radius: 5px;
-    font-family: "agave nerd font";
+    font-family: "Baumans";
     /* font-size: 20px; */
     min-height: 5px;
 }
 
 window#waybar {
-    background: rgba(109, 102, 100,0.6);
+    background: rgba(181, 216, 218,0.6);
 }
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
 #window {
     margin-top: 6px;
     padding-left: 10px;
@@ -31,8 +26,8 @@ window#waybar.hidden {
 }
 #workspaces button {
     transition: none;
-    color: #D6A9A3;
     background: transparent;
+    color: #E7B779;
     font-size: 20px;
     border-radius: 4px;
     padding:0 10px;
@@ -48,19 +43,17 @@ window#waybar.hidden {
     margin-right: 0px;
 }
 #workspaces button.empty {
-    color: #F7CCC7;
-    opacity: 0.8;
+    color: #E7B779;
 }
 #workspaces button.persistent {
-    color: #F7CCC7;
 }
 #workspaces button.occupied {
-    color: #F7CCC7;
+    color: #FAAFA5;
 }
 #workspaces button.active,
 #workspaces button.visible {
-    color: #FFDD13;    
-    font-size: 22px;
+    color: #68A19B;
+    font-size: 28px;
 }
 #workspaces button.urgent {
     color: #FFFFFF;
@@ -70,8 +63,8 @@ window#waybar.hidden {
     transition: none;
     box-shadow: inherit;
     text-shadow: inherit;
-    border-color: #FFDD13;
-    color: #FFDD13;
+    border-color: #FF6200;
+    color: #CE796B;
 }
 #workspaces button.active:hover {
 /*    color: #F1BA0A;*/
@@ -96,16 +89,16 @@ window#waybar.hidden {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#date,
 #mpd {
     padding: 8px 10px;
-    color: #DEA59E;
+    color: #E7B779;
     font-size: 18px;
 }
 #window{}
 #workspaces {
     margin: 0 10px;
 }
-
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
@@ -124,7 +117,7 @@ window#waybar.hidden {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #FFDD13;
+    background-color: #D26A6A;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 1s;
@@ -135,15 +128,18 @@ window#waybar.hidden {
 /*083D77,650D1B*/
 #clock{
     font-size: 16px;
-    color:#D6A9A3;
     padding-top:10px;
+    color: #68A19B;
+}
+#date{
+  color:#FFFFFF;
 }
 label:focus {
-    background-color: #000000;
+    background-color: #FFFFFF;
 }
 #custom-power{
-    color:#C5B9BB;
-    padding-right: 10px;
+    padding-right: 20px;
+    font-size: 16px;
 }
 #tray > .passive {
     -gtk-icon-effect: dim;
@@ -151,26 +147,16 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #FFDD13;
+    background-color: #FF6200;
 }
 
 #mpd {
     background-color: #66cc99;
-    color: #3E3F45;
+    color: #CE796B;
 }
-
-#mpd.disconnected {
-    background-color: #f53c3c;
+#pulseaudio,#custom-power{
+    color: #45688A;
 }
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
 #scratchpad {
     background: rgba(0, 0, 0, 0.2);
 }
@@ -180,124 +166,125 @@ label:focus {
 }
 #custom-media {
     /* background-color: #66cc99; */
-    color: #F1BA0A;
-    font-size: 14 ;
+    color: #FF6200;
+    font-size: 14px;
     min-width: 50px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #3E3F45;
+    background-color: #FF6200;
 }
 
 #custom-pctl-prev {
-    color: #006473;
+    color: #FF6200;
 }
 
 #custom-pctl-next {
-    color: #006473;
+    color: #FF6200;
 }
 
 #custom-playerctl {
-    padding: 0 0px;
-    font-size: 16;
+    color: #CE796B;
+    padding: 10px;
+    font-size: 16px;
 }
-#custom-playerctl.0 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 0%,transparent 0.1%);}
-#custom-playerctl.1 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 1%,transparent 0.1%);}
-#custom-playerctl.2 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 2%,transparent 0.1%);}
-#custom-playerctl.3 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 3%,transparent 0.1%);}
-#custom-playerctl.4 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 4%,transparent 0.1%);}
-#custom-playerctl.5 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 5%,transparent 0.1%);}
-#custom-playerctl.6 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 6%,transparent 0.1%);}
-#custom-playerctl.7 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 7%,transparent 0.1%);}
-#custom-playerctl.8 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 8%,transparent 0.1%);}
-#custom-playerctl.9 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 9%,transparent 0.1%);}
-#custom-playerctl.10 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 10%,transparent 0.1%);}
-#custom-playerctl.11 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 11%,transparent 0.1%);}
-#custom-playerctl.12 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 12%,transparent 0.1%);}
-#custom-playerctl.13 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 13%,transparent 0.1%);}
-#custom-playerctl.14 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 14%,transparent 0.1%);}
-#custom-playerctl.15 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 15%,transparent 0.1%);}
-#custom-playerctl.16 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 16%,transparent 0.1%);}
-#custom-playerctl.17 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 17%,transparent 0.1%);}
-#custom-playerctl.18 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 18%,transparent 0.1%);}
-#custom-playerctl.19 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 19%,transparent 0.1%);}
-#custom-playerctl.20 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 20%,transparent 0.1%);}
-#custom-playerctl.21 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 21%,transparent 0.1%);}
-#custom-playerctl.22 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 22%,transparent 0.1%);}
-#custom-playerctl.23 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 23%,transparent 0.1%);}
-#custom-playerctl.24 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 24%,transparent 0.1%);}
-#custom-playerctl.25 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 25%,transparent 0.1%);}
-#custom-playerctl.26 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 26%,transparent 0.1%);}
-#custom-playerctl.27 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 27%,transparent 0.1%);}
-#custom-playerctl.28 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 28%,transparent 0.1%);}
-#custom-playerctl.29 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 29%,transparent 0.1%);}
-#custom-playerctl.30 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 30%,transparent 0.1%);}
-#custom-playerctl.31 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 31%,transparent 0.1%);}
-#custom-playerctl.32 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 32%,transparent 0.1%);}
-#custom-playerctl.33 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 33%,transparent 0.1%);}
-#custom-playerctl.34 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 34%,transparent 0.1%);}
-#custom-playerctl.35 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 35%,transparent 0.1%);}
-#custom-playerctl.36 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 36%,transparent 0.1%);}
-#custom-playerctl.37 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 37%,transparent 0.1%);}
-#custom-playerctl.38 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 38%,transparent 0.1%);}
-#custom-playerctl.39 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 39%,transparent 0.1%);}
-#custom-playerctl.40 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 40%,transparent 0.1%);}
-#custom-playerctl.41 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 41%,transparent 0.1%);}
-#custom-playerctl.42 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 42%,transparent 0.1%);}
-#custom-playerctl.43 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 43%,transparent 0.1%);}
-#custom-playerctl.44 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 44%,transparent 0.1%);}
-#custom-playerctl.45 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 45%,transparent 0.1%);}
-#custom-playerctl.46 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 46%,transparent 0.1%);}
-#custom-playerctl.47 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 47%,transparent 0.1%);}
-#custom-playerctl.48 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 48%,transparent 0.1%);}
-#custom-playerctl.49 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 49%,transparent 0.1%);}
-#custom-playerctl.50 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 50%,transparent 0.1%);}
-#custom-playerctl.51 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 51%,transparent 0.1%);}
-#custom-playerctl.52 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 52%,transparent 0.1%);}
-#custom-playerctl.53 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 53%,transparent 0.1%);}
-#custom-playerctl.54 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 54%,transparent 0.1%);}
-#custom-playerctl.55 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 55%,transparent 0.1%);}
-#custom-playerctl.56 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 56%,transparent 0.1%);}
-#custom-playerctl.57 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 57%,transparent 0.1%);}
-#custom-playerctl.58 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 58%,transparent 0.1%);}
-#custom-playerctl.59 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 59%,transparent 0.1%);}
-#custom-playerctl.60 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 60%,transparent 0.1%);}
-#custom-playerctl.61 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 61%,transparent 0.1%);}
-#custom-playerctl.62 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 62%,transparent 0.1%);}
-#custom-playerctl.63 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 63%,transparent 0.1%);}
-#custom-playerctl.64 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 64%,transparent 0.1%);}
-#custom-playerctl.65 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 65%,transparent 0.1%);}
-#custom-playerctl.66 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 66%,transparent 0.1%);}
-#custom-playerctl.67 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 67%,transparent 0.1%);}
-#custom-playerctl.68 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 68%,transparent 0.1%);}
-#custom-playerctl.69 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 69%,transparent 0.1%);}
-#custom-playerctl.70 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 70%,transparent 0.1%);}
-#custom-playerctl.71 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 71%,transparent 0.1%);}
-#custom-playerctl.72 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 72%,transparent 0.1%);}
-#custom-playerctl.73 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 73%,transparent 0.1%);}
-#custom-playerctl.74 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 74%,transparent 0.1%);}
-#custom-playerctl.75 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 75%,transparent 0.1%);}
-#custom-playerctl.76 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 76%,transparent 0.1%);}
-#custom-playerctl.77 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 77%,transparent 0.1%);}
-#custom-playerctl.78 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 78%,transparent 0.1%);}
-#custom-playerctl.79 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 79%,transparent 0.1%);}
-#custom-playerctl.80 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 80%,transparent 0.1%);}
-#custom-playerctl.81 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 81%,transparent 0.1%);}
-#custom-playerctl.82 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 82%,transparent 0.1%);}
-#custom-playerctl.83 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 83%,transparent 0.1%);}
-#custom-playerctl.84 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 84%,transparent 0.1%);}
-#custom-playerctl.85 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 85%,transparent 0.1%);}
-#custom-playerctl.86 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 86%,transparent 0.1%);}
-#custom-playerctl.87 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 87%,transparent 0.1%);}
-#custom-playerctl.88 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 88%,transparent 0.1%);}
-#custom-playerctl.89 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 89%,transparent 0.1%);}
-#custom-playerctl.90 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 90%,transparent 0.1%);}
-#custom-playerctl.91 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 91%,transparent 0.1%);}
-#custom-playerctl.92 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 92%,transparent 0.1%);}
-#custom-playerctl.93 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 93%,transparent 0.1%);}
-#custom-playerctl.94 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 94%,transparent 0.1%);}
-#custom-playerctl.95 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 95%,transparent 0.1%);}
-#custom-playerctl.96 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 96%,transparent 0.1%);}
-#custom-playerctl.97 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 97%,transparent 0.1%);}
-#custom-playerctl.98 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 98%,transparent 0.1%);}
-#custom-playerctl.99 {background-image: linear-gradient(to right,rgba(62, 63, 69, 1) 99%,transparent 0.1%);}
+#custom-playerctl.0 {background-image: linear-gradient(to right,#F5C6BE 0%,transparent 0.1%);}
+#custom-playerctl.1 {background-image: linear-gradient(to right,#F5C6BE 1%,transparent 0.1%);}
+#custom-playerctl.2 {background-image: linear-gradient(to right,#F5C6BE 2%,transparent 0.1%);}
+#custom-playerctl.3 {background-image: linear-gradient(to right,#F5C6BE 3%,transparent 0.1%);}
+#custom-playerctl.4 {background-image: linear-gradient(to right,#F5C6BE 4%,transparent 0.1%);}
+#custom-playerctl.5 {background-image: linear-gradient(to right,#F5C6BE 5%,transparent 0.1%);}
+#custom-playerctl.6 {background-image: linear-gradient(to right,#F5C6BE 6%,transparent 0.1%);}
+#custom-playerctl.7 {background-image: linear-gradient(to right,#F5C6BE 7%,transparent 0.1%);}
+#custom-playerctl.8 {background-image: linear-gradient(to right,#F5C6BE 8%,transparent 0.1%);}
+#custom-playerctl.9 {background-image: linear-gradient(to right,#F5C6BE 9%,transparent 0.1%);}
+#custom-playerctl.10 {background-image: linear-gradient(to right,#F5C6BE 10%,transparent 0.1%);}
+#custom-playerctl.11 {background-image: linear-gradient(to right,#F5C6BE 11%,transparent 0.1%);}
+#custom-playerctl.12 {background-image: linear-gradient(to right,#F5C6BE 12%,transparent 0.1%);}
+#custom-playerctl.13 {background-image: linear-gradient(to right,#F5C6BE 13%,transparent 0.1%);}
+#custom-playerctl.14 {background-image: linear-gradient(to right,#F5C6BE 14%,transparent 0.1%);}
+#custom-playerctl.15 {background-image: linear-gradient(to right,#F5C6BE 15%,transparent 0.1%);}
+#custom-playerctl.16 {background-image: linear-gradient(to right,#F5C6BE 16%,transparent 0.1%);}
+#custom-playerctl.17 {background-image: linear-gradient(to right,#F5C6BE 17%,transparent 0.1%);}
+#custom-playerctl.18 {background-image: linear-gradient(to right,#F5C6BE 18%,transparent 0.1%);}
+#custom-playerctl.19 {background-image: linear-gradient(to right,#F5C6BE 19%,transparent 0.1%);}
+#custom-playerctl.20 {background-image: linear-gradient(to right,#F5C6BE 20%,transparent 0.1%);}
+#custom-playerctl.21 {background-image: linear-gradient(to right,#F5C6BE 21%,transparent 0.1%);}
+#custom-playerctl.22 {background-image: linear-gradient(to right,#F5C6BE 22%,transparent 0.1%);}
+#custom-playerctl.23 {background-image: linear-gradient(to right,#F5C6BE 23%,transparent 0.1%);}
+#custom-playerctl.24 {background-image: linear-gradient(to right,#F5C6BE 24%,transparent 0.1%);}
+#custom-playerctl.25 {background-image: linear-gradient(to right,#F5C6BE 25%,transparent 0.1%);}
+#custom-playerctl.26 {background-image: linear-gradient(to right,#F5C6BE 26%,transparent 0.1%);}
+#custom-playerctl.27 {background-image: linear-gradient(to right,#F5C6BE 27%,transparent 0.1%);}
+#custom-playerctl.28 {background-image: linear-gradient(to right,#F5C6BE 28%,transparent 0.1%);}
+#custom-playerctl.29 {background-image: linear-gradient(to right,#F5C6BE 29%,transparent 0.1%);}
+#custom-playerctl.30 {background-image: linear-gradient(to right,#F5C6BE 30%,transparent 0.1%);}
+#custom-playerctl.31 {background-image: linear-gradient(to right,#F5C6BE 31%,transparent 0.1%);}
+#custom-playerctl.32 {background-image: linear-gradient(to right,#F5C6BE 32%,transparent 0.1%);}
+#custom-playerctl.33 {background-image: linear-gradient(to right,#F5C6BE 33%,transparent 0.1%);}
+#custom-playerctl.34 {background-image: linear-gradient(to right,#F5C6BE 34%,transparent 0.1%);}
+#custom-playerctl.35 {background-image: linear-gradient(to right,#F5C6BE 35%,transparent 0.1%);}
+#custom-playerctl.36 {background-image: linear-gradient(to right,#F5C6BE 36%,transparent 0.1%);}
+#custom-playerctl.37 {background-image: linear-gradient(to right,#F5C6BE 37%,transparent 0.1%);}
+#custom-playerctl.38 {background-image: linear-gradient(to right,#F5C6BE 38%,transparent 0.1%);}
+#custom-playerctl.39 {background-image: linear-gradient(to right,#F5C6BE 39%,transparent 0.1%);}
+#custom-playerctl.40 {background-image: linear-gradient(to right,#F5C6BE 40%,transparent 0.1%);}
+#custom-playerctl.41 {background-image: linear-gradient(to right,#F5C6BE 41%,transparent 0.1%);}
+#custom-playerctl.42 {background-image: linear-gradient(to right,#F5C6BE 42%,transparent 0.1%);}
+#custom-playerctl.43 {background-image: linear-gradient(to right,#F5C6BE 43%,transparent 0.1%);}
+#custom-playerctl.44 {background-image: linear-gradient(to right,#F5C6BE 44%,transparent 0.1%);}
+#custom-playerctl.45 {background-image: linear-gradient(to right,#F5C6BE 45%,transparent 0.1%);}
+#custom-playerctl.46 {background-image: linear-gradient(to right,#F5C6BE 46%,transparent 0.1%);}
+#custom-playerctl.47 {background-image: linear-gradient(to right,#F5C6BE 47%,transparent 0.1%);}
+#custom-playerctl.48 {background-image: linear-gradient(to right,#F5C6BE 48%,transparent 0.1%);}
+#custom-playerctl.49 {background-image: linear-gradient(to right,#F5C6BE 49%,transparent 0.1%);}
+#custom-playerctl.50 {background-image: linear-gradient(to right,#F5C6BE 50%,transparent 0.1%);}
+#custom-playerctl.51 {background-image: linear-gradient(to right,#F5C6BE 51%,transparent 0.1%);}
+#custom-playerctl.52 {background-image: linear-gradient(to right,#F5C6BE 52%,transparent 0.1%);}
+#custom-playerctl.53 {background-image: linear-gradient(to right,#F5C6BE 53%,transparent 0.1%);}
+#custom-playerctl.54 {background-image: linear-gradient(to right,#F5C6BE 54%,transparent 0.1%);}
+#custom-playerctl.55 {background-image: linear-gradient(to right,#F5C6BE 55%,transparent 0.1%);}
+#custom-playerctl.56 {background-image: linear-gradient(to right,#F5C6BE 56%,transparent 0.1%);}
+#custom-playerctl.57 {background-image: linear-gradient(to right,#F5C6BE 57%,transparent 0.1%);}
+#custom-playerctl.58 {background-image: linear-gradient(to right,#F5C6BE 58%,transparent 0.1%);}
+#custom-playerctl.59 {background-image: linear-gradient(to right,#F5C6BE 59%,transparent 0.1%);}
+#custom-playerctl.60 {background-image: linear-gradient(to right,#F5C6BE 60%,transparent 0.1%);}
+#custom-playerctl.61 {background-image: linear-gradient(to right,#F5C6BE 61%,transparent 0.1%);}
+#custom-playerctl.62 {background-image: linear-gradient(to right,#F5C6BE 62%,transparent 0.1%);}
+#custom-playerctl.63 {background-image: linear-gradient(to right,#F5C6BE 63%,transparent 0.1%);}
+#custom-playerctl.64 {background-image: linear-gradient(to right,#F5C6BE 64%,transparent 0.1%);}
+#custom-playerctl.65 {background-image: linear-gradient(to right,#F5C6BE 65%,transparent 0.1%);}
+#custom-playerctl.66 {background-image: linear-gradient(to right,#F5C6BE 66%,transparent 0.1%);}
+#custom-playerctl.67 {background-image: linear-gradient(to right,#F5C6BE 67%,transparent 0.1%);}
+#custom-playerctl.68 {background-image: linear-gradient(to right,#F5C6BE 68%,transparent 0.1%);}
+#custom-playerctl.69 {background-image: linear-gradient(to right,#F5C6BE 69%,transparent 0.1%);}
+#custom-playerctl.70 {background-image: linear-gradient(to right,#F5C6BE 70%,transparent 0.1%);}
+#custom-playerctl.71 {background-image: linear-gradient(to right,#F5C6BE 71%,transparent 0.1%);}
+#custom-playerctl.72 {background-image: linear-gradient(to right,#F5C6BE 72%,transparent 0.1%);}
+#custom-playerctl.73 {background-image: linear-gradient(to right,#F5C6BE 73%,transparent 0.1%);}
+#custom-playerctl.74 {background-image: linear-gradient(to right,#F5C6BE 74%,transparent 0.1%);}
+#custom-playerctl.75 {background-image: linear-gradient(to right,#F5C6BE 75%,transparent 0.1%);}
+#custom-playerctl.76 {background-image: linear-gradient(to right,#F5C6BE 76%,transparent 0.1%);}
+#custom-playerctl.77 {background-image: linear-gradient(to right,#F5C6BE 77%,transparent 0.1%);}
+#custom-playerctl.78 {background-image: linear-gradient(to right,#F5C6BE 78%,transparent 0.1%);}
+#custom-playerctl.79 {background-image: linear-gradient(to right,#F5C6BE 79%,transparent 0.1%);}
+#custom-playerctl.80 {background-image: linear-gradient(to right,#F5C6BE 80%,transparent 0.1%);}
+#custom-playerctl.81 {background-image: linear-gradient(to right,#F5C6BE 81%,transparent 0.1%);}
+#custom-playerctl.82 {background-image: linear-gradient(to right,#F5C6BE 82%,transparent 0.1%);}
+#custom-playerctl.83 {background-image: linear-gradient(to right,#F5C6BE 83%,transparent 0.1%);}
+#custom-playerctl.84 {background-image: linear-gradient(to right,#F5C6BE 84%,transparent 0.1%);}
+#custom-playerctl.85 {background-image: linear-gradient(to right,#F5C6BE 85%,transparent 0.1%);}
+#custom-playerctl.86 {background-image: linear-gradient(to right,#F5C6BE 86%,transparent 0.1%);}
+#custom-playerctl.87 {background-image: linear-gradient(to right,#F5C6BE 87%,transparent 0.1%);}
+#custom-playerctl.88 {background-image: linear-gradient(to right,#F5C6BE 88%,transparent 0.1%);}
+#custom-playerctl.89 {background-image: linear-gradient(to right,#F5C6BE 89%,transparent 0.1%);}
+#custom-playerctl.90 {background-image: linear-gradient(to right,#F5C6BE 90%,transparent 0.1%);}
+#custom-playerctl.91 {background-image: linear-gradient(to right,#F5C6BE 91%,transparent 0.1%);}
+#custom-playerctl.92 {background-image: linear-gradient(to right,#F5C6BE 92%,transparent 0.1%);}
+#custom-playerctl.93 {background-image: linear-gradient(to right,#F5C6BE 93%,transparent 0.1%);}
+#custom-playerctl.94 {background-image: linear-gradient(to right,#F5C6BE 94%,transparent 0.1%);}
+#custom-playerctl.95 {background-image: linear-gradient(to right,#F5C6BE 95%,transparent 0.1%);}
+#custom-playerctl.96 {background-image: linear-gradient(to right,#F5C6BE 96%,transparent 0.1%);}
+#custom-playerctl.97 {background-image: linear-gradient(to right,#F5C6BE 97%,transparent 0.1%);}
+#custom-playerctl.98 {background-image: linear-gradient(to right,#F5C6BE 98%,transparent 0.1%);}
+#custom-playerctl.99 {background-image: linear-gradient(to right,#F5C6BE 99%,transparent 0.1%);}

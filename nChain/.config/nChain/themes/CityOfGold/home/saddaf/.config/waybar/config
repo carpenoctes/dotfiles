@@ -5,9 +5,9 @@
     //"width": 100, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/playerctl"],
+    "modules-left": [ "pulseaudio", "custom/playerctl"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["battery", "network", "tray","clock", "custom/power"],
+    "modules-right": ["battery", "network", "tray","clock#date","clock","custom/power"],
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     "margin-top": 6,
     "margin-left": 6,
@@ -32,9 +32,9 @@
             // "default": "",
             // "persistent": "󰟙",
             "urgent": "󰼆",
-            "active": "\uf359",
-            "default": "󰟙",
-            "persistent": "󰟙"
+            "active": "󰟙",
+            "default": "\uf359",
+            "persistent": "\uf359"
 
          },
          "on-click":"activate",
@@ -72,15 +72,16 @@
         "format": "{:%H:%M}",
         //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         //"tooltip-format": "<tt><big>{calendar}</big></tt>",
-        "tooltip-format": "{:%Y-%m-%d}",
+        //"tooltip-format": "{:%Y-%m-%d}",
         //"format-alt": "{:%Y-%m-%d}",
         "max-length": 25
     },
-    "clock#min": {
+    "clock#date": {
         "interval": 60,
-        "format": "{:%M}",
+        "format": "{:%Y-%m-%d}",
         //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "tooltip-format": "{:%Y-%m-%d}",
+        //"tooltip-format": "<tt><big>{calendar}</big></tt>",
+        //"tooltip-format": "{:%Y-%m-%d}",
         //"format-alt": "{:%Y-%m-%d}",
         "max-length": 25
     },
@@ -125,7 +126,27 @@
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl position 5+",
         "on-scroll-down": "playerctl position 5-"
-    }
+    },
+      "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}",
+        "format-alt": "{volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "\ueb24 {icon} {format_source}",
+        "format-muted": "\ueb24",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "\uf025 ",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["\uf026", "\uf027", "\uf028 "]
+        },
+        // "on-click": "pavucontrol"
+    },
 
 }
 

@@ -1,0 +1,12 @@
+* {
+    bg1:        #00000000;      // message box bg and entry bg
+    bg2:        #0c1325AA;      // todofi background color
+    primary:    #2d97FF;        // inputbar border and text
+    secondary:  #FF6200;        // selected element + prompt
+    tertiary:   #b1dfe7;            // todofi main text
+    strongtext: #FFFFFF;        // message text + input text
+    weaktext:   #0065B8;      // normal elements + todofi message text + frame around message box + placeholder text
+    bggradient: linear-gradient(to top, #000011CC, #000022FF);  //body
+    colorful: linear-gradient(180deg, #FF6200, #2d97FF, #3DF1AA);
+    myfont:       "Baumans 12";
+}

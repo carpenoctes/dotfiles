@@ -1,6 +1,6 @@
 {
-	"color_scheme": "Packages/Colorsublime - Themes/Monokai_Soda.tmTheme",
-	"theme": "ayu-dark.sublime-theme",
+	"color_scheme": "ayu-light.sublime-color-scheme",
+	"theme": "Solarized Space Brick.sublime-theme",
 	"font_size": 13,
 	"font_face": "Iosevka Nerd Font Mono",
 	"ignored_packages":

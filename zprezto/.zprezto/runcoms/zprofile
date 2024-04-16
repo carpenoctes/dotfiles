@@ -54,7 +54,7 @@ path=(
   /usr/local/{,s}bin(N)
   $path
 )
-
+export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
 #
 # Less
 #

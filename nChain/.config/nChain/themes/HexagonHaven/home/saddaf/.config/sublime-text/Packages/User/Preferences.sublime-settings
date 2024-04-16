@@ -5,6 +5,7 @@
 	"font_face": "Iosevka Nerd Font Mono",
 	"ignored_packages":
 	[
+		"Theme - Afterglow",
 		"Vintage",
 	],
 	"index_files": true,

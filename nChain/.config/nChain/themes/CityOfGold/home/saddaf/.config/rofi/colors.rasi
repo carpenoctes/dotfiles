@@ -1,10 +1,23 @@
 * {
-    bg1:        #0c1325;      // message box bg and entry bg
-    bg2:        #0c1325CC;      // todofi background color
-    primary:    #3c7f8b;        // inputbar border and text
-    secondary:  #f78da4;        // selected element + prompt
-    tertiary:   #b1dfe7;        // todofi main text
-    strongtext: #FFFFFF;        // message text + input text
-    weaktext:   #6db4c0;      // normal elements + todofi message text + frame around message box + placeholder text
-    bggradient: linear-gradient(to top, #122239CC, #0c1325FF);  //body
+    myfont:       "Baumans 13";
+    primary:      #17355E;
+    secondary:    #68A19B;
+    strongtext:   #A36F3F;
+    weaktext:     #68A19B;
+    bggradient:   linear-gradient(to bottom, #DDEDEECC, #DDEDEEAA);  //body
+    bg:           #00000000;
+    linecolor:    #00000022;
+    width:        480;
+    selectedbg:   #68A19B44;
+    
+    promptbg:     @bg;
+    prompttext:   @strongtext;
+    promptborder: @weaktext;
+    placeholder:  @weaktext;
+    selected:     @primary;
+    selectedtext: @primary;
+    msgboxtext:   @strongtext;
+    inputtext:    @primary;
+    normaltext:   @strongtext;
+    msgboxframe:  @weaktext;
 }

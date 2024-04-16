@@ -8,5 +8,4 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
-  icon-theme: "candy-icons";
 }

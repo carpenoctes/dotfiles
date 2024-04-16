@@ -2,8 +2,8 @@
 gtk-theme=Juno-ocean-v40
 icon-theme=Hexagon-Dark-Icons
 font-name=Oxygen 11
-cursor-theme=Sweet-cursors
-cursor-size=36
+cursor-theme=Adwaita
+cursor-size=32
 toolbar-style=both-horiz
 toolbar-icons-size=large
 font-hinting=slight
