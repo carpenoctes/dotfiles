@@ -1,0 +1,13 @@
+{
+	"color_scheme": "Packages/Colorsublime - Themes/Monokai_Soda.tmTheme",
+	"theme": "ayu-dark.sublime-theme",
+	"ignored_packages":
+	[
+		"SideBarEnhancements",
+		"Theme - Monokai Pro",
+		"Vintage",
+	],
+	"font_size": 11,
+	"font_face": "Iosevka Nerd Font Mono",
+	"index_files": true,
+}

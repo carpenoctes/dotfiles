@@ -1,0 +1,12 @@
+{
+	"color_scheme": "Packages/Colorsublime - Themes/Monokai_Soda.tmTheme",
+	"theme": "ayu-dark.sublime-theme",
+	"ignored_packages":
+	[
+		"Theme - Afterglow",
+		"Vintage",
+	],
+	"font_size": 12,
+	"font_face": "Iosevka Nerd Font Mono",
+	"index_files": true,
+}

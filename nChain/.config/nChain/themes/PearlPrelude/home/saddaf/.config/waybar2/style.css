@@ -1,0 +1,157 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: 'Baumans','Agave Nerd Font Mono',Roboto;
+/*    font-size: 24px;*/
+    min-height: 10px;
+}
+
+window#waybar {
+    background: rgba(181, 216, 218,0.7);
+}
+
+#window {
+    margin-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+    transition: none;
+    color: transparent;
+}
+#workspaces {
+    margin-left: 12px;
+    margin-bottom: 0px;
+    transition: none;
+    font-size: 28px;
+}
+
+#workspaces button {
+    transition: none;
+    color: #175676;
+    background: transparent;
+    
+    padding:4px;
+    border-radius: 0;
+}
+#workspaces button:first-child{
+    border-radius: 6px 6px 0 0;
+}
+#workspaces button:last-child{
+    border-radius: 0 0 6px 6px;
+}
+#workspaces button.occupied {
+    transition: none;
+    color: #175676;
+    background: transparent;
+}
+#workspaces button.persistent {
+   /* color: rgba(114, 186, 172, 0.8);*/
+}
+#workspaces button.empty {
+    color: #438184;
+}
+#workspaces button.active,
+#workspaces button.visible {
+    color: #950952;
+}
+#workspaces button.urgent {
+    color: #FFFFFF;
+    border-color: #FFCF56;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-color: #FFCF56;
+    color: #FFCF56;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#battery,
+#custom-power,
+#mpd {
+    padding: 4px 0px;
+    color: #438184;
+    font-size: 28px;
+}
+#pulseaudio{
+  font-size:36px;
+}
+#clock{ font-size:20px; padding:0;color: #175676;}
+#custom-line{
+    color:#FFF;
+    font-size: 24px;
+}
+#custom-power{
+    color:#950952;
+}
+#network{font-size: 32px}
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: unset;
+        color: #FF7B89;
+    }
+}
+#battery {
+    background-color: unset;
+}
+#battery.critical {
+    background-color: #950952;
+    color: #FFFFFF;
+}
+#battery.critical:not(.charging) {
+    background-color: #950952;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+/*    animation-direction: alternate;*/
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#tray {
+    font-size: 24px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #950952;
+}
