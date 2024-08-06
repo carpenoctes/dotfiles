@@ -1,10 +1,23 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+/*****----- Global Properties -----*****/
 * {
-    bg1:    #161320;            // message box bg and entry bg
-    bg2:    #161320CC;          // todofi background color
-    primary:    #5882AD;        // Inputbar border and text
-    secondary:  #D898D8;        // selected element + prompt
-    tertiary:   #7dbeff;        // todofi main text
-    strongtext: #FFFFFF;        // message text + input text
-    weaktext:   #7dbeff99;      // normal elements + todofi message text + frame around message box + placeholder text
-    bggradient: linear-gradient(to top, #161320CC, #161320FF);
+    font:                        "Agave Nerd font Mono 12";
+    background:                  #020613CC;
+    background-alt:              #020613CC;
+    bggradient: linear-gradient(to bottom, #2E306CFF, #020613CC);
+    bggradient: transparent;
+    foreground:                  #6394C5;
+    selected:                    #A786B6;
+    sharp:                       #7dbeff;
+    active:                      #6E77FF;
+    urgent:                      #86CB92;
+    message:                     #86CB92;
 }

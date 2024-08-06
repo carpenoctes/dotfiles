@@ -3,7 +3,7 @@ import subprocess
 import json
 
 def runRofi(items, prompt="Search"):
-    rofiCommand = ['rofi', '-dmenu', '-format', 'i', '-i', '-theme','keybindings','-p', prompt]
+    rofiCommand = ['rofi', '-dmenu', '-format', 'i', '-i','-p', prompt, '-theme-str', 'window {width: 600;}']
     rofiProcess = subprocess.run(rofiCommand, input=items.encode('utf-8'), capture_output=True)
     item = rofiProcess.stdout.decode('utf-8').strip()
     return item

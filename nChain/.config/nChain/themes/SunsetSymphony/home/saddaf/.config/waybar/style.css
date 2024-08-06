@@ -109,6 +109,7 @@ window#waybar.hidden {
   font-size:36px;
 }
 #clock{ font-size:24px; padding:0;color: #ffffff;}
+#clock.date{font-family: 'Exo';font-weight:bold;font-size:9px; padding:6px 0;color: #FF6200;}
 #custom-line{
     color:#FF6200;
     font-size: 24px;

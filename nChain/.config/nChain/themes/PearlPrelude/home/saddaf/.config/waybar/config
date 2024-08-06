@@ -6,7 +6,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock","custom/line","clock#min"],
+    "modules-center": ["clock","clock#date","clock#min"],
     "modules-right": ["pulseaudio", "battery", "network", "tray", "custom/power"],
     "margin-top": 6,
     "margin-left": 6,
@@ -53,8 +53,27 @@
     "clock": {
         "interval": 60,
         "format": "{:%H}",
-        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "tooltip-format": "<tt><span size='9pt' font='Ubuntu Mono Nerd Font'>{calendar}</span></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "left",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#B5D8DA'>{}</span>",
+                              "days":       "<span color='#ffffff'>{}</span>",
+                              "weeks":      "<span color='#64C0C4'><b>{}</b></span>",
+                              "weekdays":   "<span color='#FAADD5'>{}</span>",
+                              "today":      "<span color='#7dbeff'><b>{}</b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    },
         //"format-alt": "{:%Y-%m-%d}",
         "max-length": 25
     },
@@ -63,6 +82,13 @@
         "format": "{:%M}",
         //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "tooltip-format": "{:%Y-%m-%d}",
+        //"format-alt": "{:%A}",
+        "max-length": 25
+    },
+    "clock#date": {
+        "interval": 3600,
+        "format": "{:%m-%d}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
         //"format-alt": "{:%Y-%m-%d}",
         "max-length": 25
     },

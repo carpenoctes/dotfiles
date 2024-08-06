@@ -1,0 +1,23 @@
+* {
+    myfont:       "Baumans 13";
+    primary:      #FF6200;
+    secondary:    #6DB4C0;
+    strongtext:   #115EA6;
+    weaktext:     #6DB4C0;    
+    bggradient:   linear-gradient(to bottom, #001738EE, #001738CC);  //body
+    bg:           #00000000;
+    linecolor:    #00000022;
+    width:        480;
+    selectedbg:   #001738FF;
+    
+    promptbg:     @bg;
+    prompttext:   @strongtext;
+    promptborder: @weaktext;
+    placeholder:  @weaktext;
+    selected:     @primary;
+    selectedtext: @primary;
+    msgboxtext:   @strongtext;
+    inputtext:    @primary;
+    normaltext:   @strongtext;
+    msgboxframe:  @weaktext;
+}

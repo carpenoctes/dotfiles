@@ -10,6 +10,7 @@ window#waybar {
     background: transparent;
     background-image: linear-gradient(to left, #000011, #000005, #000011);
     border: 1px solid rgba(45, 151, 255, 0.2);
+    font-size: 14px;
 }
 
 window#waybar.hidden {
@@ -45,18 +46,17 @@ window#waybar.hidden {
     margin-bottom: 0px;*/
     border-radius: 10px;
     transition: none;
-    font-size: 32px;
+
 }
 
 #workspaces button {
     transition: none;
-    padding:6px;
-    margin:6px 0;
+    padding:4px;
+    margin:6px 0px;
     border-radius: 3px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    font-size: 20px;
     background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/onlyoffice.svg');
 
 }
@@ -114,8 +114,7 @@ window#waybar.hidden {
    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/plasma-search.svg');
    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/wcm.svg');*/
    background-image: url('/home/saddaf/.local/share/.icons/candy-icons/apps/scalable/homebank.svg');
-   margin:2px;
-   padding:10px;
+
 }
 
 #mode {
@@ -142,14 +141,14 @@ window#waybar.hidden {
 #mpd {
     margin: 4px;
     color: #b1dfe7;
-    font-size: 32px;
-    font-size: 24px;
 }
 #clock{ font-size:24px; padding:0;color: #ffffff;}
+#clock.date{font-family: 'Exo';font-weight:bold;font-size:9px; padding:6px 0;color: #55bccf;}
 #custom-line{
     color:#2d97FF;
     font-size: 32px;
 }
+.tt{font-family: 'Exo';}
 #custom-power{
     color:#55bccf;
     background-position: center;

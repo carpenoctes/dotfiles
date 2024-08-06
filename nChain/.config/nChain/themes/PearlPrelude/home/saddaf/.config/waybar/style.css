@@ -97,8 +97,9 @@ window#waybar {
   font-size:36px;
 }
 #clock{ font-size:20px; padding:0;color: #175676;}
+#clock.date{font-family: 'Exo';font-weight:bold;font-size:9px; padding:6px 0;color: #950952;}
 #custom-line{
-    color:#FFF;
+    color:#950952;
     font-size: 24px;
 }
 #custom-power{

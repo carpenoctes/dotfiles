@@ -7,15 +7,13 @@
     alignment = right
 [volume_muted]
     appname = Muter 
-    format = "<span font='Baumans 12' foreground='#FFFFFF'>[%s]</span>"
-    frame_color = "#FF6200"
+    format = "<span font='Baumans 12' foreground='#175676'>[%s]</span>"
     icon_position = left
     history_ignore = yes
     timeout = 5
 [discord]
     desktop_entry = "discord"
     format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 12'>%s</span>\n%b"
-    frame_color="#F3E424";
     timeout = 20
     new_icon = /home/saddaf/.local/share/.icons/candy-icons/apps/scalable/discord-canary.svg
 [prisfaktamail]

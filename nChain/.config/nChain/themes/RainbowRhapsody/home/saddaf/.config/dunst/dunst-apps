@@ -1,21 +1,20 @@
 [volume]
     appname = Volym
-    format = "<span font='Baumans 18'>[%n%]</span>"
+    format = "<span font='Baumans 14'>[%n%]</span>"
     icon_position = center
     history_ignore = yes
     timeout = 3
     alignment = right
 [volume_muted]
     appname = Muter 
-    format = "<span font='Baumans 18'>[%s]</span>"
+    format = "<span font='Baumans 14'>[%s]</span>"
     frame_color = "#FF3853"
     icon_position = left
-    alignment = right
     history_ignore = yes
     timeout = 3
 [discord]
     desktop_entry = "discord"
-    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 16'>%s</span>\n%b"
+    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 14'>%s</span>\n%b"
     frame_color="#F3E424";
     timeout = 20
     new_icon = /home/saddaf/.local/share/.icons/candy-icons/apps/scalable/discord-canary.svg
@@ -23,13 +22,13 @@
     appname= Thunderbird
     summary= saddaf@prisfakta.se*
     frame_color="#FF9E0E";
-    format = "<b><span font='Iosevka 16' foreground='#FF9E0E'>Prisfakta E-post</span></b>\n%b"
+    format = "<b><span font='Iosevka 14' foreground='#FF9E0E'>Prisfakta E-post</span></b>\n%b"
 [Schemata]
     appname= Schemata
-    format="<span font='Noto Sans italic 8' foreground='#6394C5'>%a</span>\n<span foreground='#FFFFFF' font='Baumans 16'>%s</span>\n<span foreground='#86CB92' font='Iosevka 16'>%b</span>"
+    format="<span font='Noto Sans italic 8' foreground='#6394C5'>%a</span>\n<span foreground='#FFFFFF' font='Baumans 16'>%s</span>\n<span foreground='#86CB92' font='Iosevka 14'>%b</span>"
 [Spotify]
     appname= "Spotify"
     foreground = "#FFFFFF99"
     frame_color="#3CF3B4"
-    format = "<span font='Noto Sans italic 10' foreground='#3CF3B4'>%a</span>\n<span font='Baumans 16' foreground='#3CF3B4'>%s</span>\n%b"
+    format = "<span font='Noto Sans italic 10' foreground='#3CF3B4'>%a</span>\n<span font='Baumans 14' foreground='#3CF3B4'>%s</span>\n%b"
     new_icon = /home/saddaf/.local/share/.icons/candy-icons/apps/scalable/spotify-client.svg

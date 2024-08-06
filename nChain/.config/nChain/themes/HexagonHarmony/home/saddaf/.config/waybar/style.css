@@ -109,10 +109,12 @@ window#waybar.hidden {
     font-size: 32px;
 }
 #clock{ font-size:24px; padding:0;color: #ffffff;}
+#clock.date{font-family: 'Exo';font-weight:bold;font-size:9px; padding:6px 0;color: #f78da4;}
 #custom-line{
     color:#f78da4;
     font-size: 24px;
 }
+tt{font-family: 'Exo';}
 #custom-power{
     color:#55bccf;
 }

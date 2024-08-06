@@ -1,0 +1,151 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    //"height": 30, // Waybar height (to be removed for auto height)
+    //"width": 100, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [ "pulseaudio", "custom/playerctl"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["battery", "network", "tray","clock","custom/power"],
+    //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right":6,
+    // Modules configuration
+    "hyprland/workspaces": {
+    //  "disable-scroll": true,
+        //"all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+             // "1": "\udb82\udcc7",
+             // "2": "\ue745",
+             // "3": "\ue7aa",
+             // "4": "\udb81\ude6f",
+             // "5": "\ueb1c",
+            // "6": "󰲪",
+            // "7": "󰲬",
+            // "8": "󰲮",
+            // "9": "󰲰",
+            // "urgent": "",
+            // "active": "󰟙",
+            // "default": "",
+            // "persistent": "󰟙",
+            "urgent": "󰼆",
+            "active": "\uf359",
+            "default": "󰟙",
+            "persistent": "󰟙"
+
+         },
+         "on-click":"activate",
+         "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            //"4": ["eDP-1"],
+            //"5": ["eDP-1", "DP-2"]
+         }
+     },
+    // "keyboard-state": {
+    //     "numlock": true,
+    //     "capslock": true,
+    //     "format": "{name} {icon}",
+    //     "format-icons": {
+    //         "locked": "",
+    //         "unlocked": ""
+    //     }
+    // },
+    // "idle_inhibitor": {
+    //     "format": "{icon}",
+    //     "format-icons": {
+    //         "activated": "",
+    //         "deactivated": ""
+    //     }
+    // },
+    "custom/line":{
+        "format":"-",
+    },
+    "clock": {
+        "interval": 60,
+        "format": "{:%Y-%m-%d %H:%M}",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        //"tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "tooltip-format": "{:%Y-%m-%d}",
+        //"format-alt": "{:%Y-%m-%d}",
+        "max-length": 25
+    },
+    "clock#min": {
+        "interval": 60,
+        "format": "{:%M}",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "{:%Y-%m-%d}",
+        //"format-alt": "{:%Y-%m-%d}",
+        "max-length": 25
+    },
+    "network": {
+        "interval": 5,
+        "format-wifi": "󰖩",
+        "format-ethernet": "󱎔",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%): {ipaddr}",
+        "on-click": "sh ~/scripts/rofi/network-manager/rofi-network-manager.sh"
+    },
+    "tray": {
+        //"icon-size": 10,
+        "spacing": 10,
+
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "󱋸",
+        // "format-plugged": "",
+        "tooltip-format": "{capacity}%",
+        // "format-good": "", // An empty format will hide the module
+        "format-full": "󱋻",
+        "format-icons": ["󱘉","󰟙","󰼆","󱋽"]
+    },
+    "custom/power":{
+        "format":"󰤆",
+        "tooltip-format":"Power options",
+        "on-click": "rofi -show powermenu -modi powermenu:~/scripts/rofi/power-menu/rofi-power-menu.sh -p 'Sleepy time' -theme-str 'window{width: '380'px;}'"
+    },
+    "custom/playerctl": {
+        "format": "{}",
+        "return-type": "json",
+        "max-length": 30,
+        "exec": "$HOME/scripts/misc/playerctl.sh 2> /dev/null",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl position 5+",
+        "on-scroll-down": "playerctl position 5-"
+    },
+      "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}",
+        "format-alt": "{volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "\ueb24 {icon} {format_source}",
+        "format-muted": "\ueb24",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "\uf025 ",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["\uf026", "\uf027", "\uf028 "]
+        },
+        // "on-click": "pavucontrol"
+    },
+
+}
+

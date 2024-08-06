@@ -1,6 +1,6 @@
 [volume]
     appname = Volym
-    format = "<span font='Agave Nerd Font Mono 18'>[%n%]</span>"
+    format = "<span font='Agave Nerd Font Mono 14'>[%n%]</span>"
     highlight = "#55bccf99"
     background = "#122239CC"
     foreground = "#FFFFFFCC"
@@ -12,19 +12,20 @@
     new_icon = /home/saddaf/.local/share/icons/Hexagon-Dark-Icons/places/dunst/volume-on.svg
 [volume_muted]
     appname = Muter 
-    format = "<span font='Agave Nerd Font Mono 18'>[%s]</span>"
+    format = "<span font='Agave Nerd Font Mono 10'>[%s]</span>"
+    frame_color = "#f78da4"
     icon_position = left
     history_ignore = yes
     timeout = 5
     new_icon = /home/saddaf/.local/share/icons/Hexagon-Dark-Icons/places/dunst/volume-off.svg
 [discord]
     desktop_entry = "discord"
-    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 16'>%s</span>\n%b"
+    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 14'>%s</span>\n%b"
     timeout = 20
 [discord_ozz]
     desktop_entry = "discord"
     summary = Ozz*
-    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 16' foreground='#f78da4'>%s</span>\n%b"
+    format = "<span font='Noto Sans italic 10'>%a</span>\n<span font='Iosevka 14' foreground='#f78da4'>%s</span>\n%b"
     frame_color = "#7dbeffdd"
 [discord_utopia]
     desktop_entry = "discord"
@@ -32,7 +33,7 @@
     background = "#122239CC"
     foreground = "#6db4c0"
     frame_color = "#6db4c0"
-    format =   "<span font='Noto Sans italic 8' foreground='#6db4c0'>%a</span>\n<span foreground='#6db4c0' font='agave Nerd Font 16'>%s</span>\n%b"
+    format =   "<span font='Noto Sans italic 8' foreground='#6db4c0'>%a</span>\n<span foreground='#6db4c0' font='agave Nerd Font 14'>%s</span>\n%b"
     timeout = 0
 
 # [systemmsg]

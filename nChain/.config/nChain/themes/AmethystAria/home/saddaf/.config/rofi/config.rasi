@@ -1,4 +1,4 @@
-@theme "compacttheme.rasi"
+@theme "imagine.rasi"
 configuration {
   timeout {
       action: "kb-cancel";

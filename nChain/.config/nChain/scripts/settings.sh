@@ -13,7 +13,7 @@ pre_commands=(
 )
 
 post_commands=(
-	"bash nChain.sh -l AmethystDusk"
+	"bash nChain.sh -l AmethystAria"
 	"killall waybar"
 	#"killall swww"
 

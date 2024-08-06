@@ -1,18 +1,18 @@
 * {
-    myfont:       "Baumans 13";
-    primary:      #17355E;
-    secondary:    #68A19B;
-    strongtext:   #A36F3F;
-    weaktext:     #68A19B;
+    myfont:       "Baumans 12";
+    primary:      #950952;
+    secondary:    #FFCF56;
+    strongtext:   #175676;
+    weaktext:     #438184;
     bggradient:   linear-gradient(to bottom, #DDEDEECC, #DDEDEEAA);  //body
     bg:           #00000000;
     linecolor:    #00000022;
     width:        480;
-    selectedbg:   #68A19B44;
+    selectedbg:   #B5D8DA66;
     
     promptbg:     @bg;
     prompttext:   @strongtext;
-    promptborder: @weaktext;
+    promptborder: @secondary;
     placeholder:  @weaktext;
     selected:     @primary;
     selectedtext: @primary;
