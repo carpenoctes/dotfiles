@@ -1,7 +1,7 @@
 {
 	"color_scheme": "Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/dropin.tmTheme",
 	"theme": "ayu-light.sublime-theme",
-	"font_size": 13,
+	"font_size": 11,
 	"font_face": "Iosevka Nerd Font Mono",
 	"ignored_packages":
 	[
