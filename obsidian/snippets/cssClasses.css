@@ -1,7 +1,0 @@
-/*Remove strike though on chekcboxes*/
-.markdown-source-view.nostrikethrough .HyperMD-task-line[data-task="x"],
-.markdown-source-view.nostrikethrough .HyperMD-task-line[data-task="X"],
-.markdown-preview-view.nostrikethrough .HyperMD-task-line[data-task="x"],
-.markdown-preview-view.nostrikethrough .HyperMD-task-line[data-task="X"]{
-    text-decoration: none !important;
-}

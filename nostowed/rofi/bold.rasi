@@ -1,0 +1,135 @@
+* {
+    myfont:       "Baumans 12";
+    primary:      #2d97ff;
+    secondary:    #FF6200;
+    strongtext:   #FFFFFF;
+    weaktext:     #0065B8;
+    bggradient:   linear-gradient(to top, #000011CC, #000022FF);  //body
+    bg:           #00000000;
+    linecolor:    #FFFFFF22;
+    width:        480;
+    selectedbg:   #BBBBFF11;
+    
+    promptbg:     @bg;
+    prompttext:   @secondary;
+    promptborder: @primary;
+    placeholder:  @weaktext;
+    selected:     @secondary;
+    selectedtext: @secondary;
+    msgboxtext:   @strongtext;
+    inputtext:    @strongtext;
+    normaltext:   @weaktext;
+    msgboxframe:  @weaktext;
+}
+
+@import "colors.rasi"
+
+* {
+    font:               @myfont;
+    background-color:   transparent;
+    text-color:         @normaltext;
+    margin:             0px;
+    padding:            0px;
+    spacing:            0px;
+}
+
+window {
+    location:           center;
+    x-offset:           0px;
+    width:              @width;
+    y-offset:           -100;
+    border-radius:      12px;    
+    background-image:   @bggradient;
+    transparency: "real";
+}
+
+mainbox {
+    padding:            20px;
+}
+
+inputbar {
+    border-color:       @promptborder;
+    background-color:   @bg;
+    text-color:         @prompttext;
+    border:             2px;
+    border-radius:      8px;
+    margin:             0 0 12px 0;
+    padding:            4px;
+    spacing:            0px;
+    children:           [ prompt, entry ];
+    /*children:           [ entry ];*/
+}
+prompt{
+    background-color:   @promptbg;
+    text-color:         @prompttext;
+    padding:            6px 12px;
+    margin:             0px;
+}
+
+entry {
+    background-color:   @bg;
+    //placeholder:        "";
+    placeholder-color:  @placeholder;
+    text-color:         @inputtext;
+    //border-radius:    6px;
+    padding:            6px;
+}
+
+message {
+    border:             2px;
+    background-color:   @bg;
+    border-radius:      4px;
+    border-color:       @msgboxframe;
+    text-color:         @msgboxtext;
+    margin:             0 0 12px 0;
+    padding:            4px;
+}
+
+textbox {
+    padding:            0px;
+    text-color:         @msgboxtext;
+}
+
+listview {
+    background-color:   transparent;
+    margin:             0 0 12px 0px ;
+    lines:              10;
+    columns:            1;
+    fixed-height:       false;
+}
+
+element {
+    padding:            8px 20px;
+    spacing:            0px;
+    border-radius:      0px;
+    border:             1px 0 0 0;
+    border-color:       @linecolor;
+    text-color:         @normaltext;
+}
+element normal active {
+    text-color: @normaltext;
+
+}
+
+element selected normal, element selected active {
+    background-color:   @selectedbg;
+    border:             0 3px 0 3px;
+    border-radius:      4px;
+    border-color:       @selected;
+    text-color:         @selectedtext;
+}
+
+element-icon {
+    size:   1.5em;
+    vertical-align: 0.5;
+    padding: 0 20px 0 0;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element selected {
+    text-color: @selectedtext;
+}
