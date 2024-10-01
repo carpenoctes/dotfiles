@@ -1,0 +1,1 @@
+/home/saddaf/.config/nChain/scripts/linkGen.sh

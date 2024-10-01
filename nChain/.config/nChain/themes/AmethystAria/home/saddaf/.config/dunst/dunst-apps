@@ -7,7 +7,7 @@
     alignment = right
 [volume_muted]
     appname = Muter 
-    format = "<span font='Baumans 12' foreground='#175676'>[%s]</span>"
+    format = "<span font='Baumans 12' foreground='#BF86BF'>[%s]</span>"
     icon_position = left
     history_ignore = yes
     timeout = 5

@@ -1,0 +1,117 @@
+{
+    "events": [
+        {
+            "title": "Hysteroskopi",
+            "created": "2023-10-07",
+            "date": "2023-10-13",
+            "starttime": "13:00",
+            "endtime": "18:00",
+            "highpriority": 0,
+            "comment": "",
+            "place": "Montpellier",
+            "url": ""
+        },
+        {
+            "title": "Statusm\u00f6te med Ola/Helen",
+            "created": "2023-07-21",
+            "date": "2023-07-25",
+            "starttime": "12:00",
+            "endtime": "13:00",
+            "highpriority": 0,
+            "comment": "",
+            "place": "",
+            "url": ""
+        },
+        {
+            "title": "Fika hos Nada",
+            "created": "2023-07-21",
+            "date": "2023-07-21",
+            "starttime": "19:00",
+            "endtime": "",
+            "highpriority": 0,
+            "comment": "",
+            "place": "Rosentorpsv\u00e4gen 80",
+            "url": ""
+        },
+        {
+            "title": "Muqaddas kommer",
+            "created": "2023-07-13",
+            "date": "2023-07-18",
+            "starttime": "12:00",
+            "endtime": "",
+            "highpriority": 0,
+            "comment": "",
+            "place": "Mamma",
+            "url": ""
+        },
+        {
+            "title": "Tr\u00e4ffa Ace",
+            "created": "2023-07-13",
+            "date": "2023-07-16",
+            "starttime": "15:30",
+            "endtime": "",
+            "highpriority": 0,
+            "comment": "",
+            "place": "Hemma hos mig",
+            "url": ""
+        },
+        {
+            "title": "M\u00f6te med Bonnier",
+            "created": "2023-07-05",
+            "date": "2023-07-15",
+            "starttime": "12:00",
+            "endtime": "12:45",
+            "highpriority": 1,
+            "comment": "",
+            "place": "Google meet",
+            "url": ""
+        },
+        {
+            "title": "Tr\u00e4ffa Nazli",
+            "created": "2023-07-13",
+            "date": "2023-07-14",
+            "starttime": "17:00",
+            "endtime": "",
+            "highpriority": 1,
+            "comment": "Prelimin\u00e4r tid",
+            "place": "Malm\u00f6",
+            "url": ""
+        },
+        {
+            "title": "Statusm\u00f6te Helsa/Prisfakta",
+            "created": "2023-07-14",
+            "date": "2023-07-14",
+            "starttime": "09:00",
+            "endtime": "10:00",
+            "highpriority": 0,
+            "comment": "",
+            "place": "Google meet",
+            "url": "https://meet.google.com/rsu-hetg-yib",
+            "reminders": {
+                "19": "2023-07-14 08:55"
+            }
+        },
+        {
+            "title": "M\u00f6te med Ola och Helen",
+            "created": "2023-07-09",
+            "date": "2023-07-13",
+            "starttime": "14:00",
+            "endtime": "14:30",
+            "highpriority": 0,
+            "comment": "Genomg\u00e5ng av WP",
+            "place": "Google meet tr\u00e4ff",
+            "url": "https://meet.google.com/cco-xmix-qng"
+        },
+        {
+            "title": "M\u00f6te med Ola och Helen",
+            "created": "2023-07-09",
+            "date": "2023-07-13",
+            "starttime": "14:00",
+            "endtime": "14:30",
+            "highpriority": 0,
+            "comment": "Genomg\u00e5ng av WP",
+            "place": "Google meet tr\u00e4ff",
+            "url": "https://meet.google.com/cco-xmix-qng"
+        }
+    ]
+}

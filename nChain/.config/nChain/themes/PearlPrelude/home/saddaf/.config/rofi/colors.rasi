@@ -1,4 +1,5 @@
-* {
+/* for bold
+ * {
     myfont:       "Baumans 12";
     primary:      #950952;
     secondary:    #FFCF56;
@@ -20,4 +21,19 @@
     inputtext:    @primary;
     normaltext:   @strongtext;
     msgboxframe:  @weaktext;
+}
+*/
+* {
+    font:                        "Baumans 12";
+    background:                  #ddedeeCC;
+    background-alt:              #ddedeeAA;
+
+    bggradient:   linear-gradient(to bottom, #DDEDEECC, #DDEDEEAA);  //body
+    bggradient: transparent;
+    foreground:                  #175676;
+    selected:                    #950952;
+    sharp:                       #438184;
+    active:                      #FFCF56;
+    urgent:                      #950952;
+    message:                     #175676;
 }

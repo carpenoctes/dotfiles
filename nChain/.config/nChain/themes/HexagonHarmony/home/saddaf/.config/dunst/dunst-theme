@@ -177,7 +177,7 @@
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
     icon_path = /usr/share/icons/suru-plus-telinkrin-master/status/16/:/usr/share/icons/Vortex-Dark-Icons/:/usr/share/icons/Vortex-Dark-Icons/status/16@3x/
-    font = "Oxygen 11"
+    font = "Ubuntu Nerd Font Regular 10"
 
     # Sort messages by urgency.
     sort = yes
